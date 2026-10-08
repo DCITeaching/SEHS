@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Self-paced Unit 1 review for IB SEHS SL at DC International School.">
+<meta name="robots" content="noindex, nofollow">
+
+  <style>
+    /* Baseline the Artifact host normally supplies. */
+    :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;background:#f7f7f6}
+    img{max-width:100%}
+    [hidden]{display:none!important}
+  </style>
+<title>Movement Analysts Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* Layout: a single reading column; topic rail across the top, one panel at a time beneath it. */
+:root{
+  --bg:#F2F4F7; --surface:#FFFFFF; --surface-2:#E8ECF2; --line:#CFD7E2;
+  --fg:#15202B; --fg-2:#4A5666; --fg-3:#6F7D8F;
+  --accent:#2F4B8F; --accent-soft:#E4EAF7; --on-accent:#FFFFFF;
+  --ok:#1C6B47; --ok-soft:#E0F0E7;
+  --no:#9B2730; --no-soft:#FBE6E6;
+  --warn:#8A5A00; --warn-soft:#FBF0DC;
+  --ahl:#6B3A7E; --ahl-soft:#F1E7F5;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:10px; --shadow:0 1px 2px rgba(21,32,43,.06),0 4px 14px rgba(21,32,43,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E131A; --surface:#161D27; --surface-2:#1F2833; --line:#2E3947;
+  --fg:#E8EDF4; --fg-2:#AEBAC9; --fg-3:#8593A5;
+  --accent:#8FABE8; --accent-soft:#1B2740; --on-accent:#0E131A;
+  --ok:#6FC79B; --ok-soft:#142B21;
+  --no:#E8949B; --no-soft:#2E1619;
+  --warn:#DDB15E; --warn-soft:#2B2213;
+  --ahl:#C79EDA; --ahl-soft:#241A2B;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0E131A; --surface:#161D27; --surface-2:#1F2833; --line:#2E3947;
+  --fg:#E8EDF4; --fg-2:#AEBAC9; --fg-3:#8593A5;
+  --accent:#8FABE8; --accent-soft:#1B2740; --on-accent:#0E131A;
+  --ok:#6FC79B; --ok-soft:#142B21;
+  --no:#E8949B; --no-soft:#2E1619;
+  --warn:#DDB15E; --warn-soft:#2B2213;
+  --ahl:#C79EDA; --ahl-soft:#241A2B;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:28px 72px}
+h1,h2,h3,h4{font-family:var(--serif);text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.01em}
+p{margin:0 0 .8em}
+p:last-child{margin-bottom:0}
+a{color:var(--accent)}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- masthead ---------- */
+.mast{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:22px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3);margin:0 0 8px}
+.mast h1{font-size:clamp(28px,6vw,40px);line-height:1.08;margin-bottom:10px}
+.mast .sub{color:var(--fg-2);font-size:15px;max-width:60ch}
+.themebtn{position:absolute;top:0;right:0;background:none;border:1px solid var(--line);color:var(--fg-2);
+  border-radius:999px;padding:5px 11px;font-size:12px;line-height:1}
+.masthead-row{position:relative;padding-right:76px}
+
+/* ---------- overall progress ---------- */
+.overall{display:flex;align-items:center;gap:14px;margin-top:16px;flex-wrap:wrap}
+.meter{flex:1 1 180px;min-width:0;height:7px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .35s ease}
+.meter-label{font-family:var(--mono);font-size:12.5px;color:var(--fg-2);font-variant-numeric:tabular-nums}
+
+/* ---------- topic rail ---------- */
+.rail{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:24px}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 13px;
+  text-align:left;color:var(--fg);display:flex;flex-direction:column;gap:7px;min-width:0;box-shadow:var(--shadow)}
+.tcard[aria-current="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),var(--shadow)}
+.tcard .code{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--accent)}
+.tcard .nm{font-family:var(--serif);font-size:15.5px;font-weight:600;line-height:1.25}
+.tcard .st{font-family:var(--mono);font-size:11.5px;color:var(--fg-3);font-variant-numeric:tabular-nums}
+.tcard .bar{height:4px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.tcard .bar i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .3s}
+
+/* ---------- mode tabs ---------- */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px;flex-wrap:wrap}
+.tab{background:none;border:0;border-bottom:2px solid transparent;color:var(--fg-3);
+  padding:9px 13px;font-size:14px;font-weight:500;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+
+/* ---------- study ---------- */
+.sec{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.sec h3{font-size:19px;margin-bottom:4px}
+.sec .pg{font-family:var(--mono);font-size:11px;color:var(--fg-3);letter-spacing:.04em;margin-bottom:10px}
+.sec dl{margin:0;display:grid;gap:9px}
+.sec dt{font-weight:600;font-size:14.5px}
+.sec dd{margin:1px 0 0;color:var(--fg-2);font-size:14.5px}
+.sec ul{margin:0;padding-left:1.1em;display:grid;gap:5px;color:var(--fg-2);font-size:14.5px}
+.sec table{width:100%;border-collapse:collapse;font-size:14px}
+.sec .scroll{overflow-x:auto;margin-top:4px}
+.sec th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--fg-3);border-bottom:1px solid var(--line);padding:6px 10px 6px 0;font-weight:500;white-space:nowrap}
+.sec td{padding:6px 10px 6px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.sec tr:last-child td{border-bottom:0}
+.flag{border-left:3px solid var(--warn);background:var(--warn-soft);padding:10px 13px;border-radius:0 6px 6px 0;
+  margin-top:12px;font-size:14px;color:var(--fg)}
+.flag b{color:var(--warn)}
+.ahlbox{border-left:3px solid var(--ahl);background:var(--ahl-soft);padding:10px 13px;border-radius:0 6px 6px 0;
+  margin-top:12px;font-size:14px}
+.ahlbox b{color:var(--ahl)}
+mark{background:var(--accent-soft);color:var(--fg);padding:0 3px;border-radius:3px}
+
+/* ---------- questions ---------- */
+.qmeta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.qcount{font-family:var(--mono);font-size:12px;color:var(--fg-3);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.score{font-family:var(--mono);font-size:12px;color:var(--fg-2);font-variant-numeric:tabular-nums}
+.qcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.stem{font-family:var(--serif);font-size:19.5px;line-height:1.35;margin-bottom:16px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:11px 13px;color:var(--fg);
+  font-size:15px;line-height:1.45;transition:border-color .15s,background .15s}
+.opt:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}
+.opt:disabled{cursor:default}
+.opt .ltr{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--fg-3);
+  border:1px solid var(--line);border-radius:5px;width:22px;height:22px;flex:0 0 22px;
+  display:grid;place-items:center;margin-top:1px}
+.opt.is-ok{border-color:var(--ok);background:var(--ok-soft)}
+.opt.is-ok .ltr{border-color:var(--ok);color:var(--ok)}
+.opt.is-no{border-color:var(--no);background:var(--no-soft)}
+.opt.is-no .ltr{border-color:var(--no);color:var(--no)}
+.opt.is-dim{opacity:.5}
+
+.fb{margin-top:14px;border-radius:8px;padding:13px 15px;font-size:14.5px;line-height:1.5}
+.fb.ok{background:var(--ok-soft);border:1px solid var(--ok)}
+.fb.no{background:var(--no-soft);border:1px solid var(--no)}
+.fb .verdict{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;font-weight:500}
+.fb.ok .verdict{color:var(--ok)}
+.fb.no .verdict{color:var(--no)}
+.fb .why{margin-bottom:9px}
+.fb .truth{padding-top:9px;border-top:1px solid color-mix(in srgb,var(--fg) 15%,transparent)}
+.ref{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  background:var(--surface);border:1px solid var(--line);color:var(--fg-2);
+  padding:2px 7px;border-radius:99px;margin-top:9px}
+
+.nav{display:flex;gap:9px;justify-content:space-between;margin-top:16px;flex-wrap:wrap}
+.btn{background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);border-radius:8px;padding:9px 17px;font-weight:500;font-size:14.5px}
+.btn.ghost{background:none;color:var(--fg-2);border-color:var(--line)}
+.btn:disabled{opacity:.45;cursor:default}
+
+/* ---------- written items ---------- */
+.wcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.marks{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.06em}
+textarea{width:100%;min-height:118px;background:var(--bg);color:var(--fg);border:1px solid var(--line);
+  border-radius:8px;padding:11px 12px;font-family:var(--sans);font-size:15px;line-height:1.5;resize:vertical;margin-top:10px}
+.ms{margin-top:14px;background:var(--surface-2);border-radius:8px;padding:13px 15px}
+.ms h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-3);font-weight:500;margin-bottom:9px}
+.mspt{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mspt:last-of-type{border-bottom:0}
+.mspt input{margin-top:5px;width:16px;height:16px;flex:0 0 16px;accent-color:var(--ok)}
+.mspt label{cursor:pointer}
+.selfscore{margin-top:11px;font-family:var(--mono);font-size:13px;color:var(--fg-2);font-variant-numeric:tabular-nums}
+.note{margin-top:10px;font-size:13.5px;color:var(--fg-2);font-style:italic}
+
+/* ---------- results ---------- */
+.result{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.big{font-family:var(--serif);font-size:46px;line-height:1;font-variant-numeric:tabular-nums}
+.misslist{margin-top:16px;display:grid;gap:9px}
+.miss{border-left:3px solid var(--no);background:var(--no-soft);padding:10px 13px;border-radius:0 6px 6px 0;font-size:14.5px}
+.miss .mq{font-weight:600;margin-bottom:3px}
+.empty{color:var(--fg-2);font-size:14.5px}
+footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);color:var(--fg-3);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mast">
+    <div class="masthead-row">
+      <button class="themebtn" id="themebtn" type="button">Theme</button>
+      <p class="eyebrow">IB SEHS SL &middot; Unit 1</p>
+      <h1>The Movement Analysts</h1>
+      <p class="sub">Study the section, then answer. Every wrong option tells you why it was tempting and sends you back to the page in the book that settles it. Nothing here is recorded or graded.</p>
+    </div>
+    <div class="overall">
+      <span class="meter-label" id="ovlabel">0 of 0 answered</span>
+      <span class="meter"><i id="ovbar" style="width:0%"></i></span>
+    </div>
+  </div>
+
+  <nav class="rail" id="rail"></nav>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="panel"></div>
+
+  <footer>
+    Content and page references are from the course textbook, chapters B.1.1 (pp.&nbsp;252&ndash;268), B.1.2 (269&ndash;280), B.1.3 (281&ndash;299) and B.1.4 (300&ndash;307).
+    Sections marked <b>AHL</b> are Additional Higher Level and are not assessed at SL.
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   DATA — every item traced to a page in the four chapters
+   ============================================================ */
+const T = [
+/* ======================= B.1.1 ======================= */
+{
+id:"b11", code:"B.1.1", name:"Position, planes & movement", pages:"252–268",
+study:[
+ {h:"The anatomical position", pg:"p. 254, 259", html:`
+  <p>Every movement term assumes one starting posture: <b>standing upright, facing straight ahead, feet parallel and close together, palms facing forward.</b> Change the posture and the descriptions change with it &mdash; which is exactly why the reference position exists.</p>`},
+ {h:"Directional terms", pg:"p. 254", table:[["Superior / Inferior","Nearer to the head / below or further from the head"],
+  ["Anterior / Posterior","In front of or nearer the front / behind or nearer the back"],
+  ["Medial / Lateral","Closer to the midline / further away from the midline"],
+  ["Proximal / Distal","Nearer to where a limb attaches to the body / further away from it"],
+  ["Internal / External","Located inside or away from the surface / on or near the surface"],
+  ["Intermediate","Between two structures, one medial and one lateral"]],
+  flag:`<b>Proximal and distal are not up and down.</b> They are measured along the limb from where it attaches to the trunk. Superior and inferior are the up&ndash;down pair. The wrist is distal to the elbow and also inferior to it, which is why the mix-up survives.`},
+ {h:"Planes and axes — and why they never share a name", pg:"p. 258–259", html:`
+  <p>Three planes <b>cut</b> the body; three axes are the lines you <b>rotate about</b>. The axis always runs at right angles to the plane of movement, so the pairs are deliberately mismatched.</p>`,
+  table:[["Sagittal (median) plane — cuts left from right","Frontal axis (left to right)","flexion, extension"],
+   ["Frontal plane — cuts front from back","Sagittal axis (front to back)","abduction, adduction"],
+   ["Transverse plane — cuts top from bottom","Longitudinal axis (top to bottom)","medial and lateral rotation"]],
+  thead:["Plane","Axis you rotate about","Fundamental movements"],
+  flag:`<b>This is the single biggest loss on Paper 1A.</b> Sagittal plane goes with the <i>frontal</i> axis; frontal plane with the <i>sagittal</i> axis. Table 3 on p.&nbsp;259 is organised by plane with the axis named inside each definition &mdash; and note it never prints "longitudinal axis" for the rotation rows, so you have to supply it.`},
+ {h:"The six fundamental movements", pg:"p. 259", table:[
+  ["Flexion","Closing of the joint angle around the frontal axis"],
+  ["Extension","Opening of the joint angle around the frontal axis"],
+  ["Abduction","Opening of the joint angle around the sagittal axis"],
+  ["Adduction","Closing of the joint angle around the sagittal axis"],
+  ["Medial (inward) rotation","Anterior surface of the moving bone turns towards the inside of the body"],
+  ["Lateral (outward) rotation","Anterior surface of the moving bone turns towards the outside of the body"]],
+  html:`<p>These apply to all joints <b>as long as the structure permits it</b>. The elbow flexes and extends, but its structure does not permit abduction, adduction or rotation.</p>`,
+  flag:`<b>The book flags this one itself:</b> "the shoulder joint flexes when the arm is raised and extends when it is lowered (these two movements are the opposite to what might be expected)."`},
+ {h:"Movements at particular joints", pg:"p. 260", table:[
+  ["Elevation / Depression","Lifting or moving upwards / dropping or moving downwards (shrugging)"],
+  ["Protraction / Retraction","Anterior movement in the transverse plane / returning a protracted part to the anatomical position"],
+  ["Horizontal flexion / extension","Closing / opening the joint angle around the transverse plane <b>once already flexed to 90°</b>. Also called horizontal adduction / abduction"],
+  ["Dorsiflexion","<b>Flexion</b> of the ankle — toes pulled up towards the shin"],
+  ["Plantarflexion","<b>Extension</b> of the ankle — pointing the toes"],
+  ["Inversion","<b>Lateral</b> rotation of the ankle — sole faces inwards"],
+  ["Eversion","<b>Medial</b> rotation of the ankle — sole faces outwards"],
+  ["Pronation","Medial rotation of the radioulnar joint <b>(not the wrist)</b> — palm turns down"],
+  ["Supination","Lateral rotation of the radioulnar joint <b>(not the wrist)</b> — palm turns up"],
+  ["Opposition / Reposition","Thumb crosses the palm to touch a fingertip / returns beside the index finger"]],
+  flag:`<b>Two naming traps.</b> Pointing the toes is an <i>extension</i>, not a flexion. And inversion turns the sole <i>inwards</i> yet is classified as <i>lateral</i> rotation &mdash; the name and the direction pull opposite ways. Check both columns of Table 4 before you answer.`},
+ {h:"Combination movements", pg:"p. 260, 261–262", html:`
+  <p><b>Circumduction</b> is the circling of a segment &mdash; a combination of hyperextension, abduction, extension and adduction. It needs <b>at least a biaxial joint</b> and occurs at the shoulder, hip, wrist, ankle and thumb. It is not a fundamental movement and it is not the same as rotation.</p>
+  <p><b>Pronation of the foot</b> = dorsiflexion + eversion + abduction, just after landing. <b>Supination of the foot</b> = plantarflexion + inversion + adduction, during push-off. The same two words name something completely different at the forearm.</p>
+  <p><b>Hyper-</b> (Greek for "beyond") means the action goes beyond 180° or back past the starting position &mdash; or, the book's second definition, into the space posterior to the body.</p>`},
+ {h:"Range of motion", pg:"p. 263", html:`<p>ROM at a joint depends on four things: the shape of the articulating bone surfaces; the position and length of the restraining ligaments; the effects of the muscles and tendons; and the amount of soft tissue at the joint.</p>
+  <p>A large ROM is usually helpful, <b>but</b> excessive ROM is hypermobility, which makes joints susceptible to dislocation or damage.</p>`},
+ {h:"Skeleton: axial and appendicular", pg:"p. 254–257", html:`
+  <p>206 bones in total. The <b>axial</b> component has 80 &mdash; skull, ribs, sternum, vertebral column &mdash; and its main function is <b>protection</b>. The <b>appendicular</b> component has 126 &mdash; the pectoral and pelvic girdles and the limbs &mdash; and is mainly involved in <b>movement</b>.</p>`},
+ {h:"Anthropometry and ergonomic design", pg:"p. 263–266", ahl:true, html:`
+  <p><b>Additional HL — not assessed at SL.</b> Anthropometric data measure body dimensions and proportions; ergonomic design uses biomechanics to minimise discomfort and fatigue. Syllabus statement B.1.1.3.</p>`}
+],
+mcq:[
+ {s:"Flexion at the elbow occurs in which plane, about which axis?",
+  o:[{t:"Sagittal plane, about the frontal axis",ok:1},
+     {t:"Sagittal plane, about the sagittal axis",f:"The plane and the axis almost never share a name. The axis is the line you rotate <i>about</i>, and for sagittal-plane movement it runs left to right through the joint &mdash; the frontal axis."},
+     {t:"Frontal plane, about the sagittal axis",f:"That is the correct pairing, but for the wrong movement. Abduction and adduction happen in the frontal plane about the sagittal axis. Flexion closes the joint angle in the sagittal plane."},
+     {t:"Frontal plane, about the frontal axis",f:"Two errors at once. Flexion is a sagittal-plane movement, and no movement happens in the plane that shares its axis's name &mdash; the axis is always perpendicular to the plane."}],
+  truth:"Table 3 defines flexion as \"closing of the joint angle around the frontal axis at the joint\", listed under motion in the sagittal plane.", pg:"p. 259"},
+
+ {s:"A swimmer raises a straight arm forward and upward from the anatomical position. This movement is:",
+  o:[{t:"Flexion at the shoulder",ok:1},
+     {t:"Extension at the shoulder",f:"The book flags exactly this: \"the shoulder joint flexes when the arm is raised and extends when it is lowered (these two movements are the opposite to what might be expected).\" Raising is flexion."},
+     {t:"Abduction at the shoulder",f:"Abduction raises the arm <i>sideways</i>, away from the midline, in the frontal plane. Forward and upward is the sagittal plane."},
+     {t:"Circumduction at the shoulder",f:"Circumduction is the full circling combination &mdash; hyperextension, abduction, extension and adduction together. A single forward raise is one movement."}],
+  truth:"Raising the arm forward closes the joint angle in the sagittal plane, which is flexion.", pg:"p. 259"},
+
+ {s:"Pronation and supination occur at which joint?",
+  o:[{t:"The radioulnar joint",ok:1},
+     {t:"The wrist joint",f:"The book puts this in brackets in both definitions, twice: \"medial rotation of the radioulnar joint <b>(not the wrist joint)</b>\". The hand turns because the radius crosses over the ulna, not because the wrist moves."},
+     {t:"The elbow joint",f:"The elbow flexes and extends only &mdash; its structure \"does not permit abduction, adduction, or medial or lateral rotation\". Pronation still works with the elbow held flexed at 90°, which proves it is a different joint."},
+     {t:"The shoulder joint",f:"Shoulder rotation turns the whole arm. Pronation turns the forearm and hand alone, and the book says it happens \"even when the elbow is flexed\"."}],
+  truth:"Pronation is medial rotation and supination lateral rotation of the radioulnar joint.", pg:"p. 260"},
+
+ {s:"Using the book's own definitions, inversion of the foot is:",
+  o:[{t:"Lateral rotation of the ankle joint",ok:1},
+     {t:"Medial rotation of the ankle joint",f:"That is the book's definition of <i>eversion</i>. The trap is real: inversion turns the sole <i>inwards</i> but is classified as <i>lateral</i> rotation. The name and the direction genuinely pull opposite ways, so read both columns of Table 4."},
+     {t:"Flexion of the ankle joint",f:"That is dorsiflexion &mdash; pulling the toes up towards the shin."},
+     {t:"Extension of the ankle joint",f:"That is plantarflexion &mdash; pointing the toes."}],
+  truth:"Table 4: inversion = lateral rotation of the ankle; the examples column adds that the sole faces inwards.", pg:"p. 260"},
+
+ {s:"A dancer rises onto the toes. The movement at the ankle is:",
+  o:[{t:"Plantarflexion, which the book classifies as extension of the ankle",ok:1},
+     {t:"Plantarflexion, which the book classifies as flexion of the ankle",f:"Right movement, wrong classification &mdash; and the classification is the part that gets examined. Dorsiflexion is the flexion; plantarflexion is the extension. Pointing the toes is an extension even though the foot looks folded."},
+     {t:"Dorsiflexion, which the book classifies as flexion of the ankle",f:"The classification is right but the movement is wrong. Dorsiflexion pulls the toes <i>up</i> towards the shin."},
+     {t:"Eversion of the ankle",f:"Eversion turns the sole outwards &mdash; a rotation, not a sagittal-plane movement."}],
+  truth:"Table 4: dorsiflexion = \"flexion of the ankle joint\"; plantarflexion = \"extension of the ankle joint\". Both occur in the sagittal plane.", pg:"p. 260"},
+
+ {s:"When \"hyper-\" is added to a movement term, it indicates that:",
+  o:[{t:"The action goes beyond 180°, or back past the starting position",ok:1},
+     {t:"The action is performed quickly or forcefully",f:"Speed has nothing to do with it. \"Hyper\" is Greek for \"beyond\" or \"more than\" and refers to range, not effort."},
+     {t:"The action reaches exactly 180°",f:"180° is the threshold &mdash; hyper- means beyond it. Reaching it is just full extension."},
+     {t:"The action occurs at a joint not designed for it",f:"A joint not designed for a movement simply cannot do it &mdash; the elbow cannot abduct at all. Hyper- describes going further in a movement the joint does permit."}],
+  truth:"The book gives two definitions: beyond 180° or past the starting position, or movement into the space posterior to the body.", pg:"p. 260"},
+
+ {s:"A cricket bowler circles the arm at the shoulder. Circumduction is best described as:",
+  o:[{t:"A combination of hyperextension, abduction, extension and adduction, requiring at least a biaxial joint",ok:1},
+     {t:"Rotation of the humerus about the longitudinal axis",f:"Rotation is a single fundamental movement in the transverse plane. A joint can rotate without circumducting &mdash; circumduction traces a cone, which needs movement in more than one plane."},
+     {t:"A fundamental movement that applies to all joints",f:"Circumduction appears in neither Table 3 nor Table 4 &mdash; it is a combination, and it needs at least a biaxial joint. The six fundamental movements apply to all joints only where the structure permits."},
+     {t:"A combination of flexion and extension only",f:"Flexion and extension both happen in the sagittal plane, so combining them traces a line, not a circle. You need at least two planes."}],
+  truth:"Circumduction occurs at the shoulder, hip, wrist, ankle and thumb &mdash; the joints with at least two axes.", pg:"p. 261–262"},
+
+ {s:"Pronation of the <i>foot</i> is a combination of:",
+  o:[{t:"Dorsiflexion, eversion and abduction",ok:1},
+     {t:"Plantarflexion, inversion and adduction",f:"That is supination of the foot, which the book associates with push-off in walking and running. Pronation occurs just after landing, as body weight is absorbed."},
+     {t:"Medial rotation of the radioulnar joint",f:"That is pronation of the <i>forearm</i> — medial rotation at the radioulnar joint. The same word names two different movements in this chapter, at two different joints."},
+     {t:"Dorsiflexion and inversion",f:"Half right &mdash; dorsiflexion belongs, but pronation everts the foot rather than inverting it, and abduction is the third component."}],
+  truth:"Foot pronation = dorsiflexion + eversion + abduction. Not everyone pronates on landing; it depends on body structure and technique.", pg:"p. 262"},
+
+ {s:"The structure of the elbow joint permits:",
+  o:[{t:"Flexion and extension only",ok:1},
+     {t:"Flexion, extension, and medial and lateral rotation",f:"The forearm does rotate, but at the <i>radioulnar</i> joint rather than the elbow. The book states the elbow&rsquo;s structure \"does not permit abduction, adduction, or medial or lateral rotation\"."},
+     {t:"Flexion, extension, abduction and adduction",f:"Abduction and adduction need an axis the elbow does not have. Its structure permits movement in the sagittal plane only."},
+     {t:"All six fundamental movements",f:"The six fundamental movements apply to all joints only \"as long as the structure permits movements around the appropriate axes\". The elbow is the book&rsquo;s own worked counter-example."}],
+  truth:"\"The elbow joint flexes when it bends and extends when it straightens, but the structure of the joint does not permit abduction, adduction, or medial or lateral rotation.\"", pg:"p. 259"},
+
+ {s:"Horizontal flexion (horizontal adduction) at the shoulder requires that:",
+  o:[{t:"The arm is already flexed to 90°",ok:1},
+     {t:"The arm starts in the anatomical position",f:"From the anatomical position the arm cannot move horizontally &mdash; it hangs vertically. The 90° precondition is written into the definition itself."},
+     {t:"The arm is abducted to 180°",f:"That is past the horizontal. The definition specifies flexion to 90°, which puts the arm straight out in front."},
+     {t:"The elbow is extended",f:"Elbow position is not part of the definition. The precondition is 90° of flexion at the shoulder."}],
+  truth:"Both horizontal flexion and horizontal extension are defined as acting \"when the body segment has already been flexed to 90°\".", pg:"p. 260"},
+
+ {s:"The knee is distal to the hip. \"Distal\" means:",
+  o:[{t:"Further away from where the limb attaches to the body",ok:1},
+     {t:"Below, or further away from the head",f:"That is <i>inferior</i>. Proximal and distal are measured along the limb from its attachment, not up and down the body. The knee happens to be both, which is why this error survives."},
+     {t:"Further away from the midline of the body",f:"That is <i>lateral</i>."},
+     {t:"Located on or near the surface",f:"That is <i>external</i>. Note this book uses internal and external rather than deep and superficial."}],
+  truth:"Proximal = nearer to where a limb attaches to the body; distal = further away from it.", pg:"p. 254"}
+],
+written:[
+ {q:"A gymnast performs a cartwheel. State the plane of movement and the axis of rotation, and justify your answer.", m:3,
+  ms:["Frontal plane.","Sagittal (anteroposterior) axis.","The body rotates side to side about an axis running from front to back through the centre of gravity — the whole-body case, not a joint axis."],
+  note:"Figure 10 classifies the cartwheel as a frontal-plane movement about the centre of gravity. Do not award the axis without the plane it belongs to."},
+ {q:"Distinguish between pronation of the forearm and pronation of the foot.", m:3,
+  ms:["Forearm pronation is medial rotation at the radioulnar joint (not the wrist) — a single rotation that turns the palm downwards.","Foot pronation is a combination of dorsiflexion, eversion and abduction at the ankle and foot.","A clear statement of the difference: one is a single fundamental rotation at one joint; the other is a three-component combination — the same word naming two different things."],
+  note:"Self-study question 2 (p. 268) asks you to distinguish pronation from supination; this item extends it to the two senses of \"pronation\" on pp. 260 and 262. The third mark is for naming the difference, not for listing two definitions and stopping."}
+]},
+
+/* ======================= B.1.2 ======================= */
+{
+id:"b12", code:"B.1.2", name:"Connective tissues & joints", pages:"269–280",
+study:[
+ {h:"Bone: four types, and what bone is made of", pg:"p. 269–271", html:`
+  <p>The four main types are <b>long</b> (femur, metatarsals, <mark>clavicle</mark>), <b>short</b> (carpals, tarsals), <b>flat</b> (sternum, scapula, ribs, <mark>pelvis</mark>) and <b>irregular</b> (vertebrae, sacrum, coccyx). <b>Sesamoid</b> bones &mdash; short bones embedded in tendons where pressure develops &mdash; are listed separately, outside the four.</p>
+  <p>Bone is a matrix of collagen fibres with water and mineral salts. The salts crystallise and harden the tissue; the collagen gives tensile strength. The book likens it to reinforced concrete.</p>`,
+  flag:`<b>Two classifications students reliably invert.</b> The clavicle is a <i>long</i> bone (length always exceeds width), and the pelvis is a <i>flat</i> bone while the sacrum and coccyx are <i>irregular</i>.`},
+ {h:"Structure of a long bone", pg:"p. 271", table:[
+  ["Diaphysis","The shaft — made of compact (hard) bone; resists the stress of weight"],
+  ["Epiphyses","The proximal and distal ends — made of cancellous (spongy) bone, a honeycomb lattice"],
+  ["Red bone marrow","Stored in <b>cancellous</b> bone — this is where blood cell production occurs"],
+  ["Yellow bone marrow","Stored in the <b>medullary cavity</b> within the diaphysis"],
+  ["Articular cartilage","A thin layer covering the bone ends where they articulate — reduces friction, absorbs shock"],
+  ["Periosteum","Covers the bone <i>not</i> covered by articular cartilage — growth, repair, nutrition, attachment of ligaments and tendons"],
+  ["Nutrient foramen","A small opening in the diaphysis through which blood vessels enter"]]},
+ {h:"Ligaments, tendons, cartilage, fascia", pg:"p. 273–274", table:[
+  ["Ligament","<b>Bone to bone.</b> Strap-like bands or round cords, generally passing over joints. Provide stability, restrain movements at their normal limits, resist movements the joint was not designed for. Strong and flexible, but <b>not very elastic</b>"],
+  ["Tendon","<b>Muscle to bone.</b> Tough, flexible fibrous connective tissue, formed where the fascia layers continue beyond the muscle fibres. May be a rounded cord or a flat sheet (aponeurosis). Transmit muscle force to bone"],
+  ["Cartilage","A dense network of collagen and elastic fibres. Strong, with resilience. <b>No blood vessels and no nerves</b>, except in the perichondrium. Hyaline is the most abundant type; fibrocartilage forms menisci and intervertebral discs"],
+  ["Fascia","Fibrous tissue, adipose tissue and fluid, between and surrounding other tissues. Epimysium covers the whole muscle, perimysium surrounds fascicles, endomysium surrounds individual fibres"]],
+  flag:`<b>The book's clearest exam hook:</b> "Unlike ligaments and tendons, muscles have a good nerve and blood supply." That is why a pulled muscle repairs well and a torn ligament or damaged cartilage does not.`},
+ {h:"The three joint types", pg:"p. 273, 275", html:`<p><b>The basic classifier is the joint cavity</b> &mdash; whether there is a gap between the articulating bones. Movement is the consequence, not the test.</p>`,
+  thead:["Type","Joint cavity","Movement","Examples"],
+  table:[["Fibrous","None","<b>No movement</b>","Sutures of the skull"],
+   ["Cartilaginous","None","<b>Limited</b> movement","Intervertebral discs (fibrocartilage); ribs to sternum (hyaline)"],
+   ["Synovial","Yes","Free — the most important joints for mobility","Shoulder, hip, knee, elbow"]],
+  flag:`<b>Fibrous joints allow <i>no</i> movement</b>, not "slight" movement. Limited movement belongs to cartilaginous joints. This single word is the whole difference.`},
+ {h:"Inside a synovial joint", pg:"p. 275–276", table:[
+  ["Joint (articular) cavity","The space between the bones; contains synovial fluid"],
+  ["Articular cartilage","Usually hyaline. Reduces friction, absorbs shock, protects the bones. Varies in thickness with the stress it meets"],
+  ["Articular capsule","A sleeve around the joint — flexible enough to allow movement, with tensile strength that protects against dislocation"],
+  ["Synovial membrane","<b>Lines the inside of the capsule</b> and secretes synovial fluid. Also lines the bursae"],
+  ["Synovial fluid","Like uncooked egg white; becomes more fluid with movement. Lubricates, reduces friction, provides nutrients to the cartilage"],
+  ["Menisci","Semilunar discs of <b>fibrocartilage</b> between poorly matched bones, as at the femur and tibia. Improve the fit — cushioning and stability"],
+  ["Bursae","Small fluid-filled sacs lined by synovial membrane, found where two structures rub. Reduce friction"]]},
+ {h:"The six types of synovial joint", pg:"p. 276–277",
+  thead:["Type","Shape","Movement","Example"],
+  table:[["Gliding","Flat or slightly curved surfaces","Back and forth and side to side; <b>least</b> movement of all synovial joints","Between carpals; between tarsals"],
+   ["Hinge","Convex fits into a reciprocal concave surface","Flexion and extension, <b>one direction only</b>","Elbow, knee, joints between phalanges"],
+   ["Pivot","One bone forms a ring in which the other rolls","Rotation","Radius around ulna at the radioulnar joint"],
+   ["Condyloid","Oval or egg-shaped convex into a reciprocal concave","<b>Two</b> directions — up/down and side to side","Radius and carpals at the wrist"],
+   ["Saddle","Saddle and rider shapes","<b>Two</b> directions — side to side and up and down","Thumb: metacarpal and the carpal next to it"],
+   ["Ball and socket","Sphere-shaped head into a rounded cavity","<b>All</b> directions — greatest movement","Shoulder, hip"]],
+  flag:`<b>Hinge and condyloid are both "convex into concave"</b> in the book's own description column. The discriminator is one direction versus two. Condyloid and saddle are both two directions &mdash; there the discriminator is the shape and the example.`},
+ {h:"Movement against stability", pg:"p. 273", html:`
+  <p>"Generally, the more movement a joint has, the less stability it has and the greater the risk of injury." The book lists several factors, including these four: the shape of the bones and whether they interlock; the area over which the bones are in contact; the flexibility of the ligaments; and the influence of other soft tissue such as muscles, tendons and the joint capsule.</p>`}
+],
+mcq:[
+ {s:"The most basic classification of joints relies on:",
+  o:[{t:"The presence or absence of a joint cavity",ok:1},
+     {t:"How much movement the joint permits",f:"That is the consequence, not the classifier. The book is explicit: \"The most basic classification relies on the presence or absence of a joint cavity.\" Fibrous and cartilaginous joints have none; synovial joints do."},
+     {t:"The type of tissue connecting the bones",f:"Joints are \"further classified\" that way — it is the second step, applied after the cavity question has been settled."},
+     {t:"The shape of the articulating bone surfaces",f:"Also a second-step classifier, and the one used to sort the six synovial types once you already know the joint is synovial."}],
+  truth:"Cavity first, then tissue type or bone shape.", pg:"p. 273, 275"},
+
+ {s:"How much movement do fibrous joints permit?",
+  o:[{t:"None",ok:1},
+     {t:"Slight movement",f:"A very common slip, and one word decides it. The book says fibrous joints allow <i>no</i> movement. \"Limited movement\" is the phrase it reserves for <i>cartilaginous</i> joints."},
+     {t:"Limited movement",f:"That is the cartilaginous joint — an intervertebral disc or the ribs meeting the sternum."},
+     {t:"Free movement in one plane",f:"Free movement requires a joint cavity, which makes it synovial."}],
+  truth:"Fibrous: a thin layer of fibrous tissue continuous with the periosteum, and no movement. Example: the sutures of the skull.", pg:"p. 275"},
+
+ {s:"Which statement about cartilage is correct?",
+  o:[{t:"It has no blood vessels and no nerves, except in the perichondrium",ok:1},
+     {t:"It has a rich blood supply, which is why it repairs quickly",f:"The opposite is true, and the consequence matters: because cartilage lacks its own blood supply, \"cartilage repair proceeds slowly\"."},
+     {t:"It has nerves but no blood vessels, which is why osteoarthritis is painful",f:"Tempting, because osteoarthritis genuinely hurts. But articular cartilage has no nerve supply either, so the pain \"is due to damage to the surrounding tissues rather than the cartilage itself\"."},
+     {t:"It is the only connective tissue containing collagen",f:"Collagen is in bone too — it is the fibre matrix that gives bone its tensile strength."}],
+  truth:"Cartilage is avascular and aneural. Articular cartilage relies on synovial fluid for nutrients and oxygen.", pg:"p. 273–274, 278"},
+
+ {s:"Unlike ligaments and tendons, muscles:",
+  o:[{t:"Have a good nerve and blood supply",ok:1},
+     {t:"Are made of collagen fibres",f:"The book does not give collagen as the distinguishing feature here, and collagen appears in bone and cartilage too. The stated contrast is the nerve and blood supply."},
+     {t:"Attach to the periosteum",f:"Tendons and ligaments both attach to the periosteum — that is a similarity, not a difference."},
+     {t:"Are able to be stretched beyond their resting length",f:"Ligaments can also be stretched beyond their resting length — the problem is that they take a long time to come back, and may not."}],
+  truth:"\"Unlike ligaments and tendons, muscles have a good nerve and blood supply.\" This is why a pulled or strained muscle repairs well.", pg:"p. 274"},
+
+ {s:"Which best describes ligaments?",
+  o:[{t:"Strong and flexible, but not very elastic",ok:1},
+     {t:"Strong and highly elastic",f:"Flexible and elastic are not the same word. Ligaments \"are not very elastic and take a long time to return to their original length after they have been stretched\". Cartilage is the tissue the book credits with resilience."},
+     {t:"Weak but highly elastic, allowing full range of movement",f:"Ligaments are \"generally very strong\". Their job is to restrain movement at its normal limits, not to permit it."},
+     {t:"Strong and inelastic, connecting muscle to bone",f:"The elasticity is right but the attachment is wrong — muscle to bone is a tendon. Ligaments connect bone to bone."}],
+  truth:"If stretched abnormally for prolonged periods ligaments may be permanently damaged, lose the ability to stabilise the joint, and increase injury risk.", pg:"p. 273"},
+
+ {s:"The synovial membrane:",
+  o:[{t:"Lines the inside of the articular capsule and secretes synovial fluid",ok:1},
+     {t:"Is another name for the articular capsule",f:"They are two different layers. The membrane lines the <i>inside</i> of the capsule — the capsule is the sleeve, the membrane is its lining."},
+     {t:"Covers the articulating surfaces of the bones",f:"That is articular cartilage, which is usually hyaline cartilage."},
+     {t:"Connects bone to bone across the joint",f:"That is a ligament — although in some joints the capsule's own fibres run in parallel bundles that form ligaments."}],
+  truth:"The membrane also lines the bursae, which is how they \"provide lubrication to the structures and therefore reduce friction\".", pg:"p. 276"},
+
+ {s:"Menisci are:",
+  o:[{t:"Semilunar discs of fibrocartilage that improve the fit between poorly matched bones",ok:1},
+     {t:"Small fluid-filled sacs that reduce friction where two structures rub",f:"Those are bursae. Both reduce friction, but by different means — bursae are sacs of fluid, menisci are discs of cartilage."},
+     {t:"A thin layer of hyaline cartilage covering the bone ends",f:"That is articular cartilage. Menisci sit <i>between</i> the bones rather than coating them, and they are fibrocartilage rather than hyaline."},
+     {t:"Thickened bands of the articular capsule that act as ligaments",f:"Those are the parallel fibre bundles of the capsule. Menisci are separate discs of fibrocartilage."}],
+  truth:"Found between the femur and tibia at the knee, where the bone shapes are not well matched. They provide cushioning and stability.", pg:"p. 276"},
+
+ {s:"Which type of synovial joint permits movement in one direction only?",
+  o:[{t:"Hinge",ok:1},
+     {t:"Gliding",f:"Gliding joints move back and forth <i>and</i> side to side — more than one direction, though the book notes they have the least movement of all synovial joints."},
+     {t:"Condyloid",f:"Condyloid joints allow movement in two directions — the wrist moves up and down and side to side."},
+     {t:"Pivot",f:"A pivot joint rotates: one bone forms a ring in which the other rolls. Rotation is a different kind of movement from flexion and extension."}],
+  truth:"Hinge joints bend and straighten in one direction only. Examples: elbow, knee, and the small joints between the phalanges.", pg:"p. 276"},
+
+ {s:"Blood cell production in a long bone occurs in:",
+  o:[{t:"Cancellous (spongy) bone, where red marrow is stored",ok:1},
+     {t:"The medullary cavity, where yellow marrow is stored",f:"Right cavity, wrong marrow. Yellow marrow is stored in the medullary cavity of the diaphysis; <i>red</i> marrow is in cancellous bone, and red marrow is the one that makes blood cells."},
+     {t:"Compact bone in the diaphysis",f:"Compact bone is relatively solid and dense with few spaces. Marrow needs the honeycomb lattice of cancellous bone."},
+     {t:"The periosteum",f:"The periosteum is the outer membrane — important for growth, repair, nutrition and attachment, but not for blood cell production."}],
+  truth:"Cancellous bone has an irregular latticework with many spaces; red bone marrow is stored there.", pg:"p. 271"},
+
+ {s:"The clavicle is classified as which type of bone?",
+  o:[{t:"Long",ok:1},
+     {t:"Flat",f:"Understandable — the clavicle looks nothing like a femur. But the book's test is proportion, not size or shape: in a long bone \"the length is always greater than the width\". It lists the clavicle alongside the femur and metatarsals."},
+     {t:"Short",f:"Short bones are small and cube-shaped and usually articulate with more than one other bone — the carpals and tarsals."},
+     {t:"Irregular",f:"Irregular bones have specialised shapes and functions: the vertebrae, sacrum and coccyx."}],
+  truth:"Long bones usually have a long cylindrical shaft enlarged at both ends, and are the most important bones for movement.", pg:"p. 269"},
+
+ {s:"The relationship between joint movement and joint stability is:",
+  o:[{t:"The more movement a joint has, the less stability it has and the greater the risk of injury",ok:1},
+     {t:"The more movement a joint has, the more stable it is, because the muscles are stronger",f:"Muscles do contribute to stability, but the book states the general relationship as a trade-off, not a reinforcement."},
+     {t:"Movement and stability are independent of each other",f:"The book opens the section with \"Joint movement is inextricably linked to joint stability.\""},
+     {t:"Only ligament flexibility affects stability",f:"One of several factors the book lists. The others named are bone shape and whether the bones interlock, the area of contact between them, and other soft tissue such as muscles, tendons and the joint capsule."}],
+  truth:"The shoulder and hip are both ball and socket joints, yet their structures differ, which is why they differ in mobility and stability.", pg:"p. 273, 278"}
+,
+
+ {s:"Which connective tissue joins bone to bone at a synovial joint?",
+  o:[{t:"Ligament",ok:1},
+     {t:"Tendon",f:"Tendons join <i>muscle</i> to bone. They are formed where the fascia layers continue beyond the muscle fibres, and their job is to transmit the force of contraction to the bone."},
+     {t:"Fascia",f:"Fascia lies between and surrounds other tissues — muscles and bones — rather than joining one bone to another. Its layers are the epimysium, perimysium and endomysium."},
+     {t:"Cartilage",f:"Articular cartilage covers the ends of the bones where they meet, reducing friction and absorbing shock. It coats the bones rather than attaching them to each other."}],
+  truth:"Ligaments are strong, flexible tissues that connect bone to bone, generally passing over the joint, providing stability and restraining movement at its normal limits.", pg:"p. 273"},
+
+ {s:"Which type of synovial joint permits movement in all three planes?",
+  o:[{t:"Ball and socket",ok:1},
+     {t:"Condyloid",f:"Condyloid joints move in two directions — the wrist goes up and down and side to side, but it does not rotate about its own long axis."},
+     {t:"Hinge",f:"One direction only: flexion and extension, in the sagittal plane."},
+     {t:"Pivot",f:"A pivot joint produces rotation only — one bone forms a ring in which the other rolls, as the radius does around the ulna."}],
+  truth:"The book says ball and socket joints \"can move in all directions and therefore have the greatest amount of movement\". Note it never prints the words \"three planes\" or \"triaxial\" for them — you have to make that link yourself.", pg:"p. 277"}
+],
+written:[
+ {q:"Describe how the shoulder joint and the elbow joint differ in the stability and the range of movement they provide.", m:3,
+  ms:["The shoulder is a ball and socket joint and moves in all directions, giving the greatest range of movement of any synovial joint; the elbow is a hinge joint and flexes and extends in one direction only.","The elbow is the more stable of the two — the general rule is that the more movement a joint has, the less stability it has and the greater the risk of injury.","A reason drawn from the stated stability factors: the shape of the bones and whether they interlock, and the area over which they are in contact, differ between a rounded head sitting in a cavity and a convex surface fitted into a reciprocal concave one."],
+  note:"Three marks means both joints must appear, on both counts. An answer that describes the shoulder fully and mentions the elbow in passing has answered half the question."},
+ {q:"Outline three structural features of a synovial joint and state the function of each.", m:3,
+  ms:["Any one, structure plus function: articular cartilage — reduces friction, absorbs shock and protects the bones.","A second: synovial fluid — lubricates the cavity, reduces friction and provides nutrients to the cartilage. Or the synovial membrane, which secretes it.","A third: the articular capsule — flexible enough to permit movement while its tensile strength protects against dislocation. Or menisci, or bursae."],
+  note:"Do not award a structure without a function attached to it. \"Synovial fluid\" alone is naming, not outlining."},
+ {q:"Explain why a damaged articular cartilage repairs slowly, while a pulled muscle repairs well.", m:3,
+  ms:["Cartilage has no blood vessels (it is avascular), so repair proceeds slowly.","Articular cartilage relies on synovial fluid for its nutrients and oxygen instead of a direct blood supply.","Unlike ligaments and tendons, muscles have a good nerve and blood supply, which is why they are good at repairing damage."],
+  note:"The third mark is for the contrast, stated as a contrast. Two separate descriptions sitting side by side do not earn it."}
+]},
+
+/* ======================= B.1.3 ======================= */
+{
+id:"b13", code:"B.1.3", name:"Muscular function", pages:"281–299",
+study:[
+ {h:"Three muscle types", pg:"p. 281", table:[
+  ["Skeletal","Voluntary, striated. Attaches mostly to bone by tendons — moves the skeleton"],
+  ["Cardiac","<b>Striated but involuntary</b> — contracts without conscious thought"],
+  ["Smooth","Involuntary and <b>not</b> striated. Lines blood vessels and hollow organs"]],
+  flag:`<b>Striated does not mean voluntary.</b> Cardiac muscle is striated and involuntary. That single row is the whole item.`},
+ {h:"Properties of muscle tissue", pg:"p. 282", table:[
+  ["Contractility","The ability to contract and generate force when stimulated by a nerve — the only tissue in the body with this property"],
+  ["Extensibility","The ability to be stretched beyond normal resting length"],
+  ["Elasticity","The ability to return to the original resting length after the stretch is removed"]]},
+ {h:"Motor units", pg:"p. 284, 286", html:`
+  <p>A <b>motor unit</b> is a single motor neuron and all the muscle fibres it innervates. The <b>innervation ratio</b> is how many fibres one neuron stimulates &mdash; as high as <b>2,000</b> in the gluteus maximus, as few as <b>10</b> in the eye. Many fibres means large force; few fibres means great precision.</p>
+  <p>The <b>all-or-none principle</b>: when a motor unit is innervated, <i>all</i> of its fibres contract at once. Every fibre attached to one neuron is either relaxed or contracted.</p>
+  <p><b>Orderly recruitment:</b> as intensity rises, motor units are recruited <b>type I &rarr; type IIa &rarr; type IIx</b>. The order follows the <b>size of the motor neuron</b> &mdash; smaller neurons are recruited first.</p>`,
+  flag:`<b>All-or-none applies to the motor unit, not the whole muscle.</b> If it applied to the muscle you could not hold an egg. Graded force comes from recruiting more units.`},
+ {h:"Muscle fibre types", pg:"p. 284–286", thead:["Type","Force &amp; speed","Fatigue","Sports"],
+  table:[["I (slow-twitch)","Slow transmission, small forces","Fatigue resistant; high aerobic endurance","Walking, jogging, marathon running"],
+   ["IIa (fast-twitch)","Fast transmission, stronger forces","Also resistant to fatigue","Swimming, cycling; 1,500 m run, 400 m freestyle"],
+   ["IIx (fast-twitch)","Fastest contraction, largest forces","Fatigue at a high rate","100 m sprint, 50 m sprint swim, jumping, throwing, weightlifting"]],
+  html:`<p>On average most muscles are roughly <b>50% type I, 25% type IIa, 25% type IIx</b>, though this varies greatly between muscles and between individuals.</p>`},
+ {h:"The four contraction types", pg:"p. 287–288, 290", thead:["Type","Muscle length","Force vs resistance","Example"],
+  table:[["Isometric","Unchanged — static","Not printed — the book gives only “static”","Holding a book steady; postural neck muscles"],
+   ["Isotonic concentric","<b>Shortens</b>","Muscle force <b>greater</b> than resistance","Picking up a book; upward phase of a biceps curl"],
+   ["Isotonic eccentric","<b>Lengthens</b>","Muscle force <b>less</b> than resistance","Lowering a book slowly; quadriceps running downhill"],
+   ["Isokinetic","Varies","—","The <b>body segment</b> moves at constant speed; rare in sport, usually needs equipment, useful in rehabilitation"]],
+  html:`<p>To identify the type from the movement: if the limb moves <b>opposite</b> to the resistance force, the agonists are contracting concentrically. If the limb moves in the <b>same</b> direction as the resistance but under control, the antagonists are contracting eccentrically. If there is no movement but the muscles are working, it is isometric.</p>`,
+  flag:`<b>Isokinetic is named for the segment, not the muscle.</b> The book warns directly: "just because the body segment moves at a constant rotational speed, it cannot be assumed that the muscle is contracting at a constant speed due to the different angles of pull through the ROM."`},
+ {h:"Roles of muscle", pg:"p. 289–292", table:[
+  ["Agonist","The muscle whose contraction produces the movement. Contracts concentrically; shortens"],
+  ["Antagonist","Opposes the action of the agonist. Must relax to allow movement, or contract to control or slow one"],
+  ["Synergist","Helps the agonist, usually contracting isometrically to prevent an unwanted action"],
+  ["Fixator","Assists the agonist by preventing or reducing movement <b>at another joint</b>. A synergist that stabilises the insertion site"],
+  ["Origin","The end of the muscle attached to the <b>fixed</b> bone"],
+  ["Insertion","The end attached to the bone <b>being pulled</b>"]],
+  html:`<p><b>Roles reverse with the movement.</b> Preparing to shoot in football, the hamstrings are agonists for knee flexion; as the leg swings to strike, the quadriceps become the agonists and the hamstrings the antagonists.</p>
+  <p><b>Reciprocal inhibition:</b> when the agonist's motor neuron is stimulated, the motor neuron to the antagonist is inhibited. An automatic reflex. <b>Co-activation</b> overrides it voluntarily, to stiffen a joint or control balance.</p>`,
+  flag:`<b>The one misconception the book labels as such:</b> "It is a common misconception to think that when the agonist muscles contract concentrically, the antagonist muscles contract eccentrically." It would produce torque against the motion and lower the net torque at the joint. On the upward phase of a curl the triceps <i>relaxes</i>; on the slow downward phase it is <i>still</i> relaxed while the biceps works eccentrically.`},
+ {h:"The sliding filament theory", pg:"p. 293–297", ahl:true, html:`
+  <p><b>Additional HL — syllabus statement B.1.3.2, not assessed at SL.</b> Everything from "Mechanics of muscle contraction" on p.&nbsp;293 through p.&nbsp;297 carries the AHL tab: the sarcomere's bands, the cross-bridge cycle, troponin and tropomyosin, the size principle and rate coding.</p>
+  <p>In outline: an action potential travels down the T-tubules and triggers the sarcoplasmic reticulum to release calcium ions; calcium binds troponin, which moves tropomyosin off the myosin-binding sites on actin; myosin heads bind, tilt and drag the thin filament towards the centre of the sarcomere, shortening it. Huxley, 1957.</p>
+  <p>If you are an SL candidate, read this for interest and revise pages 281&ndash;292 for the paper.</p>`}
+],
+mcq:[
+ {s:"When the agonist contracts concentrically, the antagonist usually:",
+  o:[{t:"Relaxes",ok:1},
+     {t:"Contracts eccentrically",f:"This is the one misconception the book labels as such by name. If the antagonist contracted eccentrically it would produce torque in the opposite direction to the motion, lowering the net torque at the joint — counterproductive in most movements."},
+     {t:"Contracts concentrically",f:"Two muscles shortening in opposition would lock the joint. That happens only in deliberate co-activation, which the book treats as the exception."},
+     {t:"Contracts isometrically to stabilise the joint",f:"That is the fixator's job, and a fixator usually acts at <i>another</i> joint. The antagonist relaxes."}],
+  truth:"Reciprocal inhibition: when the agonist's motor neuron is stimulated, the motor neuron to the antagonist is inhibited.", pg:"p. 291"},
+
+ {s:"During the slow, controlled lowering of a dumbbell in a biceps curl:",
+  o:[{t:"Biceps brachii contracts eccentrically; triceps brachii stays relaxed",ok:1},
+     {t:"Triceps brachii contracts concentrically to extend the elbow",f:"The book addresses this directly: the triceps \"does not contract in this action — this would simply throw the weight to the floor as the elbow would be extended actively at speed, rather than under control.\""},
+     {t:"Biceps brachii relaxes while gravity lowers the arm",f:"Then the weight would fall. The biceps is still contracting — it is just generating less force than the resistance, so it lengthens while paying the load out."},
+     {t:"Biceps brachii contracts concentrically against gravity",f:"Concentric means shortening, which would <i>raise</i> the weight. On the way down the biceps lengthens under tension."}],
+  truth:"An eccentric contraction is any muscle action in which the muscle lengthens — the muscle force is less than the resistance.", pg:"p. 287, 289, 292"},
+
+ {s:"In an isotonic eccentric contraction, the force generated by the muscle is:",
+  o:[{t:"Less than the opposing resistance",ok:1},
+     {t:"Greater than the opposing resistance",f:"That is the concentric case: the muscle shortens because it wins against the resistance."},
+     {t:"Equal to the opposing resistance",f:"That would be the isometric case. The book defines isometric simply as a static contraction — tension develops, the length does not change, and the joint does not move."},
+     {t:"Zero — the muscle is relaxed",f:"Relaxation is listed separately, and there the contraction force genuinely is zero. An eccentric contraction is still a contraction; the ends of the muscle simply get further apart."}],
+  truth:"\"The muscle lengthens while generating force against a resistance. The force generated by the muscle is less than the opposing force.\"", pg:"p. 287"},
+
+ {s:"Isokinetic motion means that:",
+  o:[{t:"The body segment moves at a constant speed around the joint",ok:1},
+     {t:"The muscle contracts at a constant speed",f:"The book warns against exactly this reading: \"just because the body segment moves at a constant rotational speed, it cannot be assumed that the muscle is contracting at a constant speed, due to the different angles of pull through the ROM.\""},
+     {t:"The muscle develops constant tension throughout the range",f:"That would be a constant-force condition, which is not what iso-<i>kinetic</i> names. Kinetic refers to motion."},
+     {t:"The muscle length does not change",f:"That is isometric — iso-<i>metric</i>, same measure, meaning same length."}],
+  truth:"Isokinetic motion is rare in sport (most movements accelerate and decelerate), usually needs complex equipment, and is useful in rehabilitation.", pg:"p. 287"},
+
+ {s:"The all-or-none principle states that:",
+  o:[{t:"When a motor unit is innervated, all of its muscle fibres contract at once",ok:1},
+     {t:"When a muscle is stimulated, all of its fibres contract at once",f:"If that were true you could not pick up an egg. The principle applies to the motor unit, not to the whole muscle — a muscle contains many motor units and recruits as many as the force demands."},
+     {t:"A muscle fibre either contracts fully or partially depending on the stimulus",f:"There is no partial contraction of a fibre. That is what \"all-or-none\" rules out."},
+     {t:"All motor units in a muscle are recruited simultaneously",f:"Recruitment is progressive and ordered: type I, then IIa, then IIx, as the intensity rises."}],
+  truth:"\"All of the muscle fibres attached to one motor neuron are either relaxed or contracted.\" Graded force comes from recruiting more units.", pg:"p. 284, 286"},
+
+ {s:"As exercise intensity increases, motor units are recruited in which order?",
+  o:[{t:"Type I, then type IIa, then type IIx",ok:1},
+     {t:"Type IIx, then type IIa, then type I",f:"Backwards. The largest, most powerful units are held in reserve for when large forces are actually required — otherwise every small movement would exhaust you."},
+     {t:"All types simultaneously, with force set by firing rate",f:"Firing rate does matter, but that is rate coding, and the book treats it as Additional HL. The core mechanism is progressive recruitment in a fixed order."},
+     {t:"In a random order determined by which fibres are least fatigued",f:"The order is fixed and determined by the size of the motor neuron, with smaller motor neurons recruited first."}],
+  truth:"\"This order of recruitment of motor units is directly related to the size of their motor neuron, with smaller motor neurons recruited first.\"", pg:"p. 286"},
+
+ {s:"On average, most muscles are composed of approximately:",
+  o:[{t:"50% type I, 25% type IIa, 25% type IIx",ok:1},
+     {t:"33% of each type",f:"An even split is the intuitive guess, but the book gives slow-twitch fibres half the total."},
+     {t:"25% type I, 25% type IIa, 50% type IIx",f:"That inverts the proportion. Type I is the most abundant on average."},
+     {t:"50% type I and 50% type II, with type IIa and IIx not distinguished",f:"The half is right for type I, but the book does split the fast-twitch half into 25% and 25%."}],
+  truth:"The exact percentage varies greatly between muscles and between individuals — the figures are an average, not a rule.", pg:"p. 285"},
+
+ {s:"A motor neuron in the eye may innervate as few as 10 muscle fibres, while one in the gluteus maximus may innervate up to 2,000. The small innervation ratio gives:",
+  o:[{t:"Great precision of movement",ok:1},
+     {t:"Greater force production",f:"The opposite. A large number of fibres per neuron is what allows a muscle to generate large forces; a small number trades force for control."},
+     {t:"Greater resistance to fatigue",f:"Fatigue resistance is a property of the fibre type, not of the innervation ratio."},
+     {t:"Faster nerve transmission",f:"Transmission speed relates to neuron diameter and fibre type, not to how many fibres one neuron reaches."}],
+  truth:"\"A small number of muscle fibres per motor neuron gives small forces but great precision.\"", pg:"p. 284"},
+
+ {s:"The origin of a skeletal muscle is:",
+  o:[{t:"The end attached to the fixed bone",ok:1},
+     {t:"The end attached to the bone being pulled",f:"That is the insertion. The two are defined by which bone moves, not by which end is higher or nearer the trunk."},
+     {t:"The point at which the motor neuron enters the muscle",f:"That is the neuromuscular junction or motor endplate."},
+     {t:"The fleshy middle section of the muscle",f:"That is the muscle belly, which becomes prominent when the muscle contracts."}],
+  truth:"Origin = the fixed bone; insertion = the bone being pulled.", pg:"p. 291"},
+
+ {s:"A fixator is a muscle that:",
+  o:[{t:"Assists the agonist by preventing or reducing movement at another joint",ok:1},
+     {t:"Prevents an unwanted secondary action of the agonist at the same joint",f:"Very close — that is the synergist's job. The biceps both flexes the elbow and supinates the forearm, so a pronator acting as synergist cancels the unwanted supination. A fixator works at <i>another</i> joint."},
+     {t:"Opposes the action of the agonist",f:"That is the antagonist."},
+     {t:"Produces the movement being performed",f:"That is the agonist, or prime mover."}],
+  truth:"\"A synergist that makes the insertion site more stable is called a fixator.\" The trapezius holding the scapula while the deltoid abducts the arm is the book's example.", pg:"p. 289–291"},
+
+ {s:"Cardiac muscle is:",
+  o:[{t:"Striated and involuntary",ok:1},
+     {t:"Striated and voluntary",f:"Striation and voluntary control are two separate properties and they do not travel together. Skeletal muscle is striated and voluntary; cardiac is striated and involuntary; smooth is neither."},
+     {t:"Smooth and involuntary",f:"Smooth muscle lines blood vessels and hollow organs such as the stomach and intestines. Cardiac muscle is striated."},
+     {t:"Smooth and voluntary",f:"No muscle type in the book is both smooth and voluntary."}],
+  truth:"Cardiac muscle \"is also striated but it is under involuntary control; therefore, it contracts without you having to think about it consciously\".", pg:"p. 281"},
+
+ {s:"A footballer flexes the knee to prepare, then swings the leg forward to strike the ball. Which is correct?",
+  o:[{t:"The hamstrings are agonists during flexion and antagonists during extension",ok:1},
+     {t:"The hamstrings are the agonists throughout the kick",f:"Roles belong to the movement, not permanently to the muscle. Once the leg swings forward the quadriceps produce the extension and the hamstrings slow it."},
+     {t:"The quadriceps are the agonists throughout the kick",f:"Same error in the other direction. During the preparatory flexion the hamstrings are the agonists and the quadriceps the antagonists."},
+     {t:"Both groups contract concentrically throughout",f:"Two opposing groups shortening at once would lock the knee. The antagonist relaxes, or contracts to control the movement."}],
+  truth:"\"The roles of the two muscles reverse\" — the book makes this point at the knee and again at the elbow.", pg:"p. 290, 292"}
+,
+
+ {s:"Two performers produce an identical force at the elbow, but performer X recruits more motor units than performer Y. The best explanation is that:",
+  o:[{t:"X&rsquo;s motor units each contain fewer muscle fibres",ok:1},
+     {t:"X has larger motor neurons",f:"Larger motor neurons serve <i>more</i> fibres and are recruited later. If X had larger neurons, X would need fewer units for the same force, not more."},
+     {t:"Y&rsquo;s muscle has undergone atrophy",f:"Atrophy is a loss of muscle size, which would reduce the force Y could produce. The stem says the two forces are identical."},
+     {t:"Y&rsquo;s muscle is contracting isometrically",f:"Contraction type does not change how many fibres a motor neuron serves. The innervation ratio is a structural property of the muscle."}],
+  truth:"The innervation ratio ranges from about 2,000 fibres per neuron in the gluteus maximus to about 10 in the eye. Fewer fibres per unit means more units must be recruited to reach the same total force — the trade is force for precision.", pg:"p. 284, 286"}
+],
+written:[
+ {q:"During the downward phase of a slow press-up, describe what is happening in the triceps brachii.", m:3,
+  ms:["It is performing an isotonic eccentric contraction.","The muscle develops tension while lengthening.","It is controlling the descent rather than producing it — gravity provides the force in the direction of movement."],
+  note:"Naming the contraction is the first sentence, not the answer. A script that stops at \"eccentric contraction\" scores 1 of 3. The markscheme caps at 2 if the contraction is named and the length change is not described."},
+ {q:"Outline the principle of orderly recruitment.", m:3,
+  ms:["As the intensity of the activity increases, motor units are recruited progressively in the order type I, then type IIa, then type IIx.","Activating more motor units is how the muscle produces more force; when little force is needed only a few are recruited.","The order of recruitment is determined by the size of the motor neuron, with smaller motor neurons recruited first."],
+  note:"The third mark is the mechanism. A sequence alone, without saying what determines it, is an incomplete answer at Outline level."}
+]},
+
+/* ======================= B.1.4 ======================= */
+{
+id:"b14", code:"B.1.4", name:"Levers in movement and sport", pages:"300–307",
+study:[
+ {h:"The parts of a lever", pg:"p. 300, 303", html:`
+  <p>A lever is a rigid rod that rotates about a fixed pivot when force is applied &mdash; a simple machine. Every lever has four parts: a <b>rigid rod</b>, a <b>fulcrum</b> (axis), a <b>load force</b> (sometimes called the resistance) and an <b>effort force</b>.</p>
+  <p>In the body, <b>bones act as the levers and joints are the fulcrums</b>; muscles supply the effort.</p>`,
+  table:[["Moment arm","The <b>perpendicular</b> distance at which a force acts from the axis of rotation"],
+   ["Effort arm","The distance at which the effort acts from the fulcrum"],
+   ["Load arm","The distance at which the load acts from the fulcrum"]],
+  flag:`<b>Perpendicular is doing real work in that definition.</b> Figure&nbsp;6 (p.&nbsp;303) shows the same box producing a longer load moment arm when it is held low and far forward than when it is held high and close in. Measuring along the limb or the trunk, instead of perpendicular to the line of action, is the commonest error.`},
+ {h:"Mechanical advantage", pg:"p. 300–302", html:`
+  <p><b>MA = length of effort moment arm &divide; length of load moment arm.</b></p>
+  <p>MA greater than 1: a smaller effort can move a heavier load. MA less than 1: a larger effort is needed to move a lighter load. The position of the fulcrum relative to the effort and the load is what decides it.</p>`,
+  flag:`<b>A caution about the book itself.</b> Page&nbsp;300 prints MA = magnitude of effort &divide; magnitude of load as its main formula, and p.&nbsp;301 then offers the moment-arm version as an equivalent ("This can also be expressed as"). They are not equivalent: taken literally the first would mean MA&nbsp;&gt;&nbsp;1 whenever the effort exceeds the load &mdash; the opposite of everything the chapter argues afterwards. Use the <b>moment-arm</b> version, which is what pp.&nbsp;301&ndash;302 actually reason with.`},
+ {h:"The three classes", pg:"p. 301–303", thead:["Class","Arrangement","MA","In the body"],
+  table:[["First","Effort and load on <b>opposite</b> sides of the fulcrum","<b>May be above, equal to or below 1</b>","\"Fairly rare.\" Neck muscles against the weight of the head"],
+   ["Second","Same side; <b>effort arm longer</b> than load arm (load in the middle)","<b>Always above 1</b>","\"Very rare.\" The only example commonly suggested is the calf muscles standing on the toes"],
+   ["Third","Same side; <b>effort arm shorter</b> than load arm (effort in the middle)","<b>Always below 1</b>","\"Very common.\" Biceps brachii holding a weight at the hand"]],
+  html:`<p>Third-class levers look wasteful &mdash; a large effort for a small load &mdash; but a small movement near the fulcrum is magnified along the length of the lever, so the far end sweeps a greater angle at greater angular velocity. <b>The advantage is in range of motion and speed</b>, and the book concludes the body's lever systems "seem to have evolved to favour range and speed of motion".</p>
+  <p>Outside the body, the <b>wheelbarrow</b> is the book's second-class example: a large load carried close to the fulcrum (the wheel) is moved by a small force at the ends of the handles.</p>`,
+  flag:`<b>MA below 1 does not prove third class.</b> The key point on p.&nbsp;303 says most of the body's <i>first</i>-class systems also have MA below 1, because muscle tendons insert close to the joints and so have short moment arms. Classify by the arrangement, never by the MA.`},
+ {h:"Levers used to project an object", pg:"p. 303", html:`
+  <p>In a baseball pitch the fulcrum is the shoulder joint, the effort is at the insertion of the pectoralis major, and the load is the ball. The effort moment arm is short and the load moment arm long, so MA is below 1 &mdash; and that is the point: <b>"The longer the lever (our arm), the more distance and speed we can achieve when throwing, assuming all other variables … are equal."</b></p>`}
+],
+mcq:[
+ {s:"In a second-class lever, the arrangement is:",
+  o:[{t:"The load lies between the fulcrum and the effort",ok:1},
+     {t:"The fulcrum lies between the effort and the load",f:"That is a first-class lever — effort and load on opposite sides of the fulcrum."},
+     {t:"The effort lies between the fulcrum and the load",f:"That is a third-class lever, which is the arrangement that dominates the human body."},
+     {t:"The effort and load act at the same point",f:"Then there would be no moment arm difference and no lever action at all."}],
+  truth:"Second class: effort and load on the same side, with the effort arm longer than the load arm — so the load must sit in between.", pg:"p. 301"},
+
+ {s:"Mechanical advantage is calculated as:",
+  o:[{t:"Length of effort moment arm ÷ length of load moment arm",ok:1},
+     {t:"Length of load moment arm ÷ length of effort moment arm",f:"Inverted. With the effort arm on top, a long effort arm gives MA above 1 — which matches \"a smaller effort can move a heavier load\"."},
+     {t:"Effort force × load force",f:"Multiplying two forces does not give a ratio, and MA is a ratio."},
+     {t:"Load arm × effort arm",f:"Also not a ratio. MA compares the two arms by dividing one by the other."}],
+  truth:"Every second-class lever has MA above 1 because its effort moment arm is always longer than its load moment arm. Every third-class lever has MA below 1 for the opposite reason.", pg:"p. 301–302"},
+
+ {s:"Which statement about first-class levers is correct?",
+  o:[{t:"Their mechanical advantage may be greater than, equal to, or less than 1",ok:1},
+     {t:"Their mechanical advantage is always greater than 1",f:"\"Always\" belongs only to the second class. For first-class levers the book says \"the effort arm may be smaller than, equal to or greater than the load arm\" — the fulcrum can sit anywhere along the rod."},
+     {t:"Their mechanical advantage is always less than 1",f:"Most first-class systems <i>in the body</i> do have MA below 1, but that is a fact about human anatomy, not about the lever class."},
+     {t:"Their mechanical advantage is always exactly 1",f:"Only when the fulcrum sits exactly midway. It usually does not."}],
+  truth:"\"A first-class lever may have a MA greater or less than 1.0.\"", pg:"p. 301–302"},
+
+ {s:"A lever system in the body is found to have a mechanical advantage of 0.2. From this alone you can conclude:",
+  o:[{t:"Nothing certain about its class",ok:1},
+     {t:"It must be a third-class lever",f:"The inference most students make, and the key point on p. 303 blocks it: \"Like the third-class levers, most of the first-class lever systems of the body have MAs less than 1.0\" — because muscle tendons insert close to the joints."},
+     {t:"It must be a first-class lever",f:"Equally unsafe, and for the same reason. MA below 1 is consistent with both classes."},
+     {t:"It cannot be a lever in the human body",f:"It is typical of levers in the human body. MA below 1 is the normal case here, not an anomaly."}],
+  truth:"Classify by the arrangement of fulcrum, effort and load. MA is a consequence, not a test.", pg:"p. 302–303"},
+
+ {s:"The book's only commonly suggested second-class lever in the human body is:",
+  o:[{t:"The calf muscles providing effort when standing on the toes",ok:1},
+     {t:"The biceps brachii holding a weight in the hand",f:"That is the book's third-class example: fulcrum at the elbow, effort at the biceps insertion, load at the hand."},
+     {t:"The neck muscles supporting the weight of the head",f:"That is the first-class example, with the fulcrum at the base of the skull between the effort behind and the load in front."},
+     {t:"The quadriceps extending the knee",f:"Not an example the chapter gives, and in any case it has the effort between the fulcrum and the load — a third-class arrangement."}],
+  truth:"The book draws a conclusion from how rare this is: \"the human body has not evolved to use its limbs as levers to overcome very large load forces.\"", pg:"p. 301"},
+
+ {s:"Third-class levers are very common in the body. What is gained from an arrangement with MA below 1?",
+  o:[{t:"Range of motion and speed",ok:1},
+     {t:"Force — a small effort can move a large load",f:"That is what MA above 1 buys, and third-class levers have MA below 1. They need a <i>large</i> effort for a small load."},
+     {t:"Stability of the joint",f:"Stability comes from bone shape, ligaments and soft tissue, not from lever class."},
+     {t:"Nothing — it is simply an inefficient arrangement",f:"The book explicitly answers this: \"However, there is another advantage to this arrangement.\" A small movement near the fulcrum is magnified along the lever."}],
+  truth:"\"The lever systems in the human body seem to have evolved to favour range and speed of motion.\"", pg:"p. 302"},
+
+ {s:"The moment arm of a force is:",
+  o:[{t:"The perpendicular distance from the axis of rotation to the line of action of the force",ok:1},
+     {t:"The distance measured along the bone or limb from the joint",f:"The commonest measuring error. Figure 6 draws the moment arm as a horizontal line from the fulcrum to the load's vertical line of action, not along the trunk — which is why bending further forward lengthens it."},
+     {t:"The total length of the lever",f:"The lever has two moment arms, one for each force, and they are rarely equal."},
+     {t:"The distance between the effort and the load",f:"Both distances are measured from the fulcrum, not from each other."}],
+  truth:"Because the distance is perpendicular to the line of action, changing posture changes the moment arm even when the limb length does not.", pg:"p. 300, 303"},
+
+ {s:"In the book's analysis of a baseball pitch, the fulcrum is the shoulder, the effort is at the insertion of pectoralis major, and the load is the ball. The mechanical advantage is:",
+  o:[{t:"Less than 1, because the effort moment arm is shorter than the load moment arm",ok:1},
+     {t:"Greater than 1, because the arm is a long lever",f:"Length alone does not give MA. What matters is the <i>ratio</i> of the two arms, and here the effort acts very close to the shoulder while the ball is at the far end."},
+     {t:"Exactly 1, because the arm segments are of similar length",f:"The two moment arms are measured from the same fulcrum and are plainly unequal — the book labels them M₁ and M₂ to show it."},
+     {t:"Impossible to determine without the mass of the ball",f:"MA is a ratio of distances. The mass of the load does not enter it."}],
+  truth:"That low MA is the point: \"The longer the lever (our arm), the more distance and speed we can achieve when throwing, assuming all other variables … are equal.\"", pg:"p. 303"},
+
+ {s:"A wheelbarrow is a second-class lever because:",
+  o:[{t:"The load sits close to the fulcrum at the wheel, and the effort is applied at the far ends of the handles",ok:1},
+     {t:"The wheel is at one end and the load is at the other",f:"Then the load would not be between the fulcrum and the effort. The whole point is that the load rides close to the wheel."},
+     {t:"The effort is applied between the wheel and the load",f:"That arrangement — effort in the middle — is third class."},
+     {t:"The handles are longer than the barrow is wide",f:"Handle length matters only through the moment arms. The classifying fact is the <i>order</i>: fulcrum, then load, then effort."}],
+  truth:"\"Larger loads can be carried close to the fulcrum (the wheel) by applying relatively small forces at the ends of the handles.\"", pg:"p. 301"},
+
+ {s:"You are carrying a heavy box. Holding it close to your body rather than out in front:",
+  o:[{t:"Shortens the load moment arm, so less effort is required",ok:1},
+     {t:"Shortens the load moment arm, so more effort is required",f:"The direction is backwards. A shorter load arm raises the MA, and a higher MA means less effort for the same load."},
+     {t:"Lengthens the effort moment arm, so less effort is required",f:"The right conclusion from the wrong mechanism. Moving the box does not move your muscles — it changes where the <i>load</i> acts, not the effort."},
+     {t:"Makes no difference, because the weight of the box is unchanged",f:"The weight is unchanged but the turning effect is not. Figure 6 shows the same box producing a longer moment arm when held low and far forward."}],
+  truth:"\"If the fulcrum is closer to the load than to the effort, then you have a MA... you can use less effort to move the load.\"", pg:"p. 302–303"}
+,
+
+ {s:"A tennis racket is swung about the wrist. Compared with a shorter racket of the same mass, a longer racket will:",
+  o:[{t:"Increase the speed of the racket head, and increase the effort required",ok:1},
+     {t:"Increase the speed of the racket head, and reduce the effort required",f:"You cannot have both. Lengthening the lever moves the load further from the fulcrum, which lengthens the load moment arm and <i>lowers</i> the mechanical advantage — so more effort, not less. The speed is what you buy with that effort."},
+     {t:"Reduce the speed of the racket head",f:"The opposite. \"A small movement of the lever near the fulcrum is magnified by the length of the lever, so that the end of the lever moves through a greater angle, and with a greater angular velocity.\""},
+     {t:"Have no effect on the speed of the racket head",f:"Length is the whole mechanism here. The book makes the same point about the arm: the longer the lever, the more distance and speed when throwing."}],
+  truth:"This is the third-class trade in an external implement. A longer load moment arm lowers MA, so a larger effort is needed — and in exchange the far end sweeps a greater angle at greater angular velocity.", pg:"p. 302–303"}
+],
+written:[
+ {q:"Identify the class of lever operating when a person rises onto the toes, and explain your answer.", m:3,
+  ms:["Second class.","The fulcrum is at the toes / ball of the foot, the load is body weight acting at the ankle, and the effort is supplied by the calf muscles at the heel.","The load lies between the fulcrum and the effort, so the effort arm is longer than the load arm and the mechanical advantage is greater than 1."],
+  note:"Naming the class is one mark of three. The arrangement and its consequence are the other two — an answer that stops at \"second class\" has written a third of the response."},
+ {q:"Explain why most lever systems in the human body operate at a mechanical disadvantage, and state what is gained in exchange.", m:3,
+  ms:["Muscle tendons insert close to the joints, so the effort moment arm is short relative to the moment arm of the load it has to overcome.","The mechanical advantage is therefore less than 1, and a larger effort is required to move a lighter load.","In exchange, a small movement near the fulcrum is magnified along the length of the lever, so the far end moves through a greater angle at greater angular velocity — range of motion and speed."],
+  note:"The gain is the mark students leave on the table. Describing the disadvantage twice is still one idea."}
+]}
+,
+/* ======================= Paper 1B skills ======================= */
+{
+id:"b1b", code:"Paper 1B", name:"Reading the data", pages:"skills paper",
+study:[
+ {h:"What Paper 1B actually asks you to do", pg:"skills, not content", html:`
+  <p>Paper 1B hands you a study and asks you to interrogate it. Almost none of the marks are for recalling anatomy. They are for a small set of repeated moves:</p>
+  <ul>
+   <li>Calculate a percentage difference or percentage change.</li>
+   <li>Read a mean with its spread statistic and say what the spread tells you.</li>
+   <li>Say what the data <b>cannot</b> show, and why.</li>
+   <li>Name a weakness in how the measurements were taken.</li>
+   <li>Suggest a change to the method that would fix it.</li>
+  </ul>
+  <p>Every one of those is a transferable skill. You can practise all of them without knowing anything about the study in front of you.</p>`,
+  flag:`<b>The booklet will not help you here.</b> It contains no normative values of any kind. If a question needs to know what is normal, the paper hands you a study and asks you to judge it &mdash; that is Paper 1B in one sentence.`},
+
+ {h:"Percentage change — the calculation and the trap", pg:"data booklet &sect; 14", html:`
+  <p><b>Percentage change = (new &minus; old) &divide; old &times; 100.</b> Divide by the value you started from, every time.</p>
+  <p>A mean rises from 120&deg; to 138&deg;. The change is 18&deg;. 18 &divide; <b>120</b> &times; 100 = <b>15%</b>. Dividing by 138 gives 13%, which is the single commonest arithmetic loss on this paper.</p>
+  <p>Show the working. A calculation worth one mark is still marked for the answer, but a visible method lets a marker see where a slip happened.</p>`},
+
+ {h:"Standard deviation — and when it is not believable", pg:"data booklet &sect; 17", html:`
+  <p>The standard deviation describes how spread out the individual values are around the mean. A large SD means the people in the study differed a lot; a small SD means they were alike.</p>
+  <p>Real data from a study you have already met:</p>`,
+  thead:["Jump type","Mean (cm)","n"],
+  table:[["Squat jump","33.51 &plusmn; 0.05","22 men"],["Countermovement jump","35.66 &plusmn; 0.06","22 men"]],
+  flag:`<b>Look hard at those standard deviations.</b> An SD of 0.05&nbsp;cm means twenty-two different people all jumped within about half a millimetre of each other. That is not plausible for human performance data. Something in the table is wrong, it is printed in a peer-reviewed journal, and you can see it. Noticing that is the whole skill. <i>Donahue et al., International Journal of Exercise Science, 2021 &mdash; cited in your resource 0.2.</i>`},
+
+ {h:"Confidence intervals — what they are, and what they are not", pg:"skills", html:`
+  <p>A 95% confidence interval tells you <b>how precisely the mean has been estimated</b>. A narrow interval means the study has pinned the average down well. It does <b>not</b> tell you where individual people fall, and it is not a normal range.</p>
+  <p>Use the overlap to judge a difference between two groups:</p>`,
+  thead:["Measure","Group A","Group B","Can you claim a difference?"],
+  table:[["Knee flexion","128&deg; (126 to 130)","141&deg; (139 to 143)","<b>Yes.</b> The intervals do not overlap, so the difference between the means is unlikely to be due to chance alone"],
+   ["Hip flexion","112&deg; (108 to 116)","116&deg; (112 to 120)","<b>No.</b> The intervals overlap, so this data cannot support a claim of a difference"]],
+  flag:`<b>Practice data &mdash; invented for this exercise. Not a published study.</b> The numbers are here to rehearse the overlap read, nothing more.`},
+
+ {h:"Reliability: measuring once, and measuring again", pg:"skills", html:`
+  <p>If each participant is measured <b>once</b>, there is no way to check whether the measurement repeats. Any error in that single reading is carried straight into the mean, and the study gives you no way to estimate how big it might be.</p>
+  <p>A large sample helps random errors partly cancel in the mean. It does nothing about a <b>systematic</b> error &mdash; an examiner who consistently aligns the goniometer a few degrees off will shift every value in the same direction, and no sample size will fix that.</p>
+  <p>The fix is always the same: repeat the measurement, report the mean of the repeats, and state the agreement between them.</p>`},
+
+ {h:"Critiquing a published method against your own", pg:"skills", html:`
+  <p>When a question asks what would make a published study a better comparison for your class data, work through the ways the two could fail to match:</p>
+  <ul>
+   <li><b>Who was measured.</b> An adult sample spanning 18 to 79 years carries age-related loss of range that does not apply to your cohort.</li>
+   <li><b>What was measured.</b> Active range and passive range are different numbers at the same joint. If the study measured one and you measured the other, the comparison is not valid.</li>
+   <li><b>How it was measured.</b> Goniometer landmarks, the starting position, and who moved the limb all change the reading.</li>
+   <li><b>How many times.</b> One reading each, or repeats and a mean.</li>
+  </ul>
+  <p>A good answer names the mismatch <i>and</i> says why it matters. Naming it alone is usually half a mark pair.</p>`},
+
+ {h:"The data booklet sections Unit 1 uses", pg:"booklet", thead:["Section","What is in it"],
+  table:[["&sect; 7","The skeletal system"],["&sect; 8","The three anatomical planes, drawn"],["&sect; 9","The muscular system"],
+   ["&sect; 11","A sarcomere in a relaxed myofibril — <b>Additional HL</b>"],["&sect; 12","The classes of lever"],
+   ["&sect; 14","Unit conversions and constants"],["&sect; 17","Variation in data sets, including standard deviation"]],
+  flag:`<b>Find these before the paper, not during it.</b> The booklet is open at the sitting and the only thing it costs you is hunting time. Open it twice tonight and locate each one &mdash; not read it, find it.`}
+],
+mcq:[
+ {s:"A mean knee flexion angle rises from 120&deg; in one group to 138&deg; in another. The percentage increase is:",
+  o:[{t:"15%",ok:1},
+     {t:"13%",f:"This is 18 &divide; 138. You have divided by the value you finished at instead of the one you started from. Percentage change is always measured against the starting value, so the denominator is 120."},
+     {t:"18%",f:"18 is the <i>difference</i> in degrees, not a percentage. A difference becomes a percentage only after it is divided by the starting value."},
+     {t:"115%",f:"138 &divide; 120 &times; 100 = 115%, which is the new value expressed as a percentage of the old one. The question asks for the <i>increase</i>, so subtract 100 — or divide the difference instead."}],
+  truth:"(138 &minus; 120) &divide; 120 &times; 100 = 18 &divide; 120 &times; 100 = 15%.", pg:"booklet &sect; 14"},
+
+ {s:"A study reports a mean with a 95% confidence interval. The interval tells you:",
+  o:[{t:"How precisely the mean has been estimated",ok:1},
+     {t:"The range within which 95% of individuals fall",f:"The most common misreading, and the one examiners set deliberately. A confidence interval is a statement about the <i>estimate of the average</i>, not about the people. Individuals are described by the standard deviation."},
+     {t:"The normal range for the population",f:"Normal ranges are a different thing entirely, and the data booklet contains none. A confidence interval has no edge an individual could be outside of."},
+     {t:"The standard deviation of the sample",f:"Related but different. The SD describes the spread of individuals; the confidence interval describes how well the mean itself has been pinned down."}],
+  truth:"A narrow interval means the study has estimated the average well. It says nothing about how different the people in it were from each other.", pg:"skills"},
+
+ {s:"Group A has a mean knee flexion of 128&deg; (95% CI 126 to 130). Group B has 141&deg; (139 to 143). What can you claim?",
+  o:[{t:"The difference between the means is unlikely to be due to chance alone",ok:1},
+     {t:"Every person in group B has greater knee flexion than every person in group A",f:"Confidence intervals are about means, not individuals. The two groups almost certainly overlap person by person — the intervals tell you nothing about that."},
+     {t:"Whatever distinguishes group B caused the greater flexion",f:"A difference between groups is not a cause. Something else may separate the groups, or the people with greater flexion may have joined group B in the first place."},
+     {t:"Group B&rsquo;s measurements are more reliable",f:"Both intervals are the same width, so neither mean is more precisely estimated than the other. Reliability is about repeatability, which this table does not report."}],
+  truth:"Non-overlapping 95% confidence intervals support a claim of a real difference between the means. Overlapping intervals do not.", pg:"skills"},
+
+ {s:"In a second measure, group A records 112&deg; (108 to 116) and group B records 116&deg; (112 to 120). The correct conclusion is:",
+  o:[{t:"This data cannot support a claim of a difference between the means",ok:1},
+     {t:"Group B has greater hip flexion than group A",f:"B&rsquo;s mean is higher, but the intervals overlap between 112 and 116 — the true means could sit anywhere in those ranges, including at the same value. The means differ; the populations may not."},
+     {t:"There is definitely no difference between the groups",f:"Overspeaking in the other direction. Overlapping intervals mean the data cannot <i>demonstrate</i> a difference, not that there is none. A larger study might resolve it."},
+     {t:"The study is invalid",f:"A result that fails to show a difference is a result, not a flaw. Nothing about the method is called into question by overlap."}],
+  truth:"Overlap means the data is consistent with the means being the same. \"We cannot claim a difference\" is the whole answer, and it earns the mark.", pg:"skills"},
+
+ {s:"In a range-of-motion study each participant was measured once. The effect on the reliability of the reported means is that:",
+  o:[{t:"The repeatability of the measurement cannot be checked, so measurement error cannot be estimated",ok:1},
+     {t:"It has no effect, because the sample is large enough for errors to cancel",f:"A large sample does help <i>random</i> errors partly cancel in the mean. But it tells you nothing about how repeatable a single goniometer reading is, and a systematic error — an examiner aligning the goniometer the same wrong way every time — does not cancel at any sample size."},
+     {t:"It makes the means more accurate, because there is no learning effect",f:"Measuring once avoids one small problem and creates a larger one. You cannot demonstrate that any single reading was trustworthy."},
+     {t:"It affects validity rather than reliability",f:"Validity is whether the study measures what it claims to measure. Repeatability of a reading is reliability, which is exactly what a single measurement leaves untested."}],
+  truth:"The fix is always the same: repeat the measurement, report the mean of the repeats, and state the agreement between them.", pg:"skills"},
+
+ {s:"A study reports 95% confidence intervals instead of standard deviations. Which can a reader no longer determine?",
+  o:[{t:"How spread out the individual values were",ok:1},
+     {t:"The mean value for each group",f:"The mean is printed — it is the number the interval is built around."},
+     {t:"The number of participants",f:"Sample size is normally reported separately, and here it is given as n for each group."},
+     {t:"Whether the difference between the means is likely to be real",f:"This is the one thing confidence intervals are <i>good</i> for. Check whether the intervals overlap."}],
+  truth:"The interval describes the precision of the mean. Individual variation is what the standard deviation reports, and swapping one for the other hides it.", pg:"skills"},
+
+ {s:"A study of 22 men reports a squat jump of 33.51 &plusmn; 0.05&nbsp;cm. The most important thing to say about that standard deviation is:",
+  o:[{t:"It is not plausible — 22 different people could not all jump within about half a millimetre of each other",ok:1},
+     {t:"It is small, which shows the measurements were very precise",f:"Precision of the instrument and variation between people are different things. However well you measure, twenty-two humans do not all jump the same height to within half a millimetre. The number describes the people, and it is not believable."},
+     {t:"It is small, which shows the group was well trained",f:"Training might make a group more alike, but not to within half a millimetre. No amount of training produces this."},
+     {t:"Nothing can be said without the raw data",f:"Something can be said, and saying it is the skill. A spread statistic can be implausible on its face, and this one is — in a peer-reviewed journal."}],
+  truth:"Part of your job on this paper is to notice when a published number cannot be right. Flagging an implausible spread statistic is a creditable answer, not a rude one.", pg:"resource 0.2"},
+
+ {s:"A table of elbow range of motion reports extension as &minus;5&deg;. The negative value represents:",
+  o:[{t:"The joint extends past the neutral starting position",ok:1},
+     {t:"A measurement error",f:"Negative values in a range-of-motion table are meaningful, not mistakes. They record movement beyond the reference position."},
+     {t:"The joint cannot be fully extended, falling 5&deg; short",f:"That would be a <i>positive</i> deficit, usually written as a flexion contracture. A negative sign records movement in the opposite direction from the starting position, not a shortfall."},
+     {t:"The measurement was taken passively rather than actively",f:"Active and passive values differ in size, but neither is recorded with a negative sign for that reason."}],
+  truth:"The book&rsquo;s own term for movement beyond the normal limit is hyperextension — \"beyond 180&deg; or back past the starting position\". A negative value is that, written numerically.", pg:"p. 260"},
+
+ {s:"A coach films a movement at 30 frames per second and states that the elbow reached full extension. Which is a limitation of the frame rate itself?",
+  o:[{t:"The true extreme of the movement may have occurred between two frames",ok:1},
+     {t:"The camera may have been positioned at an angle to the joint",f:"A real limitation, and worth writing if the question asks for any limitation. But it is a limitation of camera <i>position</i>, not of frame rate — the question asks specifically about the rate."},
+     {t:"The coach is not qualified to measure joint angles",f:"Not a measurement limitation, and not something the stem supports. Stick to what the method can and cannot show."},
+     {t:"30 frames per second is faster than the eye, so the film must be correct",f:"Faster than the eye is not the same as fast enough for the movement. A rapid extension can begin and end inside a single thirtieth of a second."}],
+  truth:"At 30 fps there is a frame every 0.033&nbsp;s. A fast movement can pass through its extreme between frames, so the film can only show the closest frame to it, not the extreme itself.", pg:"skills"}
+],
+written:[
+ {q:"A published study reports mean range of motion with 95% confidence intervals and no standard deviations. Outline two things a reader cannot determine from the data as presented.", m:2,
+  ms:["How spread out the individual values were — a confidence interval describes the precision of the estimated mean, not the variation between people.","Whether any one individual falls inside or outside a usual range — the interval is a statement about the estimate, not about people, so there is no edge for a person to be outside of."],
+  note:"Each mark needs the claim <i>and</i> the reason. \"You cannot see the spread\" on its own is the claim without the reason."},
+ {q:"A study measured the shoulder range of motion of 400 adults aged 18 to 79 with a universal goniometer, measuring each participant once. Describe two changes to the method that would make its values a more useful comparison for your own class data, and say why each would help.", m:3,
+  ms:["Take repeated measurements of each participant and report the mean of the repeats — this allows measurement error to be estimated and stops a single poor reading entering the mean unchallenged.","Report results for an age band matching the class, or restrict the sample to adolescents — a mean spanning 18 to 79 years carries age-related loss of range that does not apply to our cohort.","State and standardise whether the range measured is active or passive, and the goniometer landmarks used — the two give different numbers at the same joint, so the comparison is only valid if the same protocol produced both."],
+  note:"Name the mismatch and say why it matters. A change with no reason attached is not a Describe-level answer, and the \"why\" is where the marks sit."}
+]}
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const KEY="sehs-u1-review-v1";
+let S={topic:"b11",mode:"study",idx:{},ans:{},self:{}};
+try{const r=localStorage.getItem(KEY); if(r) S=Object.assign(S,JSON.parse(r));}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+const topic=()=>T.find(t=>t.id===S.topic);
+const LTR=["A","B","C","D","E"];
+const esc=s=>String(s).replace(/&(?![a-z#]+;)/g,"&amp;").replace(/</g,"&lt;");
+
+/* ---------- theme ---------- */
+const tb=document.getElementById("themebtn");
+tb.addEventListener("click",()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const dark=cur? cur==="dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme",dark?"light":"dark");
+});
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function answeredCount(t){const a=S.ans[t.id]||{};return Object.keys(a).length;}
+function correctCount(t){const a=S.ans[t.id]||{};return Object.values(a).filter(v=>v.ok).length;}
+
+function renderRail(){
+  document.getElementById("rail").innerHTML = T.map(t=>{
+    const n=answeredCount(t), tot=t.mcq.length, c=correctCount(t);
+    return `<button class="tcard" data-t="${t.id}" aria-current="${t.id===S.topic}">
+      <span class="code">${t.code}</span>
+      <span class="nm">${t.name}</span>
+      <span class="bar"><i style="width:${tot?(n/tot*100):0}%"></i></span>
+      <span class="st">${n? c+" of "+n+" right" : tot+" questions"}</span>
+    </button>`;}).join("");
+  let tot=0,done=0;
+  T.forEach(t=>{tot+=t.mcq.length;done+=answeredCount(t);});
+  document.getElementById("ovbar").style.width=(tot?done/tot*100:0)+"%";
+  document.getElementById("ovlabel").textContent=`${done} of ${tot} questions answered`;
+}
+
+function renderTabs(){
+  const t=topic();
+  const modes=[["study","Study"],["quiz","Questions ("+t.mcq.length+")"],["write","Write it out"],["review","Your misses"]];
+  document.getElementById("tabs").innerHTML=modes.map(([m,l])=>
+    `<button class="tab" role="tab" data-m="${m}" aria-selected="${S.mode===m}">${l}</button>`).join("");
+}
+
+function renderStudy(){
+  const t=topic();
+  return t.study.map(s=>{
+    let h=`<section class="sec"><h3>${s.h}</h3><div class="pg">${t.code} &middot; ${s.pg}</div>`;
+    if(s.html) h+=s.html;
+    if(s.table){
+      h+=`<div class="scroll"><table>`;
+      if(s.thead) h+=`<thead><tr>${s.thead.map(x=>`<th>${x}</th>`).join("")}</tr></thead>`;
+      h+=`<tbody>${s.table.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' style="font-weight:600;white-space:nowrap"':''}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    }
+    if(s.flag) h+=`<div class="${s.ahl?'ahlbox':'flag'}">${s.flag}</div>`;
+    if(s.ahl && !s.flag) h=h.replace('<section class="sec">','<section class="sec" style="border-left:3px solid var(--ahl)">');
+    return h+`</section>`;
+  }).join("");
+}
+
+function renderQuiz(){
+  const t=topic();
+  const i=Math.min(S.idx[t.id]||0, t.mcq.length-1);
+  const q=t.mcq[i];
+  const rec=(S.ans[t.id]||{})[i];
+  const done=answeredCount(t), right=correctCount(t);
+
+  let opts=q.o.map((o,j)=>{
+    let cls="opt";
+    if(rec){
+      if(o.ok) cls+=" is-ok";
+      else if(rec.pick===j) cls+=" is-no";
+      else cls+=" is-dim";
+    }
+    return `<button class="${cls}" data-o="${j}" ${rec?"disabled":""}>
+      <span class="ltr">${LTR[j]}</span><span>${o.t}</span></button>`;
+  }).join("");
+
+  let fb="";
+  if(rec){
+    const chosen=q.o[rec.pick];
+    fb = rec.ok
+      ? `<div class="fb ok"><div class="verdict">Correct</div><div>${q.truth}</div><span class="ref">${t.code} &middot; ${q.pg}</span></div>`
+      : `<div class="fb no"><div class="verdict">Not this one</div>
+         <div class="why"><b>Why ${LTR[rec.pick]} is tempting.</b> ${chosen.f}</div>
+         <div class="truth"><b>${LTR[q.o.findIndex(o=>o.ok)]} is correct.</b> ${q.truth}</div>
+         <span class="ref">Re-read ${t.code} &middot; ${q.pg}</span></div>`;
+  }
+
+  return `<div class="qmeta">
+      <span class="qcount">Question ${i+1} of ${t.mcq.length}</span>
+      <span class="score">${done? right+" / "+done+" correct so far" : "nothing recorded"}</span>
+    </div>
+    <div class="qcard">
+      <div class="stem">${q.s}</div>
+      <div class="opts">${opts}</div>
+      ${fb}
+      <div class="nav">
+        <button class="btn ghost" id="prev" ${i===0?"disabled":""}>Back</button>
+        <button class="btn" id="next" ${i===t.mcq.length-1?"disabled":""}>${rec?"Next question":"Skip"}</button>
+      </div>
+    </div>`;
+}
+
+function renderWrite(){
+  const t=topic();
+  return `<p style="color:var(--fg-2);font-size:14.5px;margin-bottom:16px;max-width:62ch">
+    Write the answer out first, in full sentences, before you open the markscheme. Then tick each mark you actually earned — not each one you meant. A ${t.written[0].m}-mark question wants ${t.written[0].m} separate creditable things.</p>`
+  + t.written.map((w,k)=>{
+    const sk=`${t.id}-${k}`, st=S.self[sk]||{open:false,ticks:[]};
+    const ticks=st.ticks||[];
+    return `<div class="wcard">
+      <div class="marks">${t.code} &middot; [${w.m} marks]</div>
+      <div class="stem" style="font-size:18px;margin:6px 0 0">${w.q}</div>
+      <textarea id="ta-${sk}" placeholder="Your answer…">${esc(st.text||"")}</textarea>
+      ${st.open ? `<div class="ms">
+          <h4>Markscheme — tick what you actually wrote</h4>
+          ${w.ms.map((m,j)=>`<div class="mspt">
+             <input type="checkbox" id="ck-${sk}-${j}" data-sk="${sk}" data-j="${j}" ${ticks[j]?"checked":""}>
+             <label for="ck-${sk}-${j}">${m} <b>[1]</b></label></div>`).join("")}
+          <div class="selfscore">You award yourself ${ticks.filter(Boolean).length} of ${w.m}.</div>
+          <div class="note">${w.note}</div>
+        </div>`
+      : `<div class="nav"><span></span><button class="btn" data-reveal="${sk}">Show the markscheme</button></div>`}
+    </div>`;
+  }).join("");
+}
+
+function renderReview(){
+  const t=topic(), a=S.ans[t.id]||{};
+  const misses=Object.keys(a).filter(k=>!a[k].ok).map(k=>({q:t.mcq[k],k:+k}));
+  const done=Object.keys(a).length;
+  if(!done) return `<div class="result"><h2 style="font-size:22px;margin-bottom:8px">Nothing to review yet</h2>
+    <p class="empty">Answer some questions in ${t.code} and anything you get wrong collects here as a revision list, with the page that settles it.</p></div>`;
+  const right=Object.values(a).filter(v=>v.ok).length;
+  return `<div class="result">
+    <div class="big">${right}<span style="font-size:22px;color:var(--fg-3)"> / ${done}</span></div>
+    <p style="color:var(--fg-2);margin-top:6px">${t.code} &middot; ${t.name}</p>
+    ${misses.length? `<div class="misslist">${misses.map(m=>`<div class="miss">
+        <div class="mq">${m.q.s}</div>
+        <div>${m.q.truth}</div>
+        <span class="ref">${t.code} &middot; ${m.q.pg}</span></div>`).join("")}</div>
+      <p style="margin-top:16px;color:var(--fg-2);font-size:14.5px">That list is your revision, already written and already specific. Re-read those pages, then clear the topic and run it again.</p>`
+    : `<p class="empty" style="margin-top:14px">Nothing missed so far in this topic.</p>`}
+    <div class="nav"><span></span><button class="btn ghost" id="clear">Clear ${t.code} and start again</button></div>
+  </div>`;
+}
+
+function render(){
+  renderRail(); renderTabs();
+  const p=document.getElementById("panel");
+  p.innerHTML = S.mode==="study"? renderStudy()
+    : S.mode==="quiz"? renderQuiz()
+    : S.mode==="write"? renderWrite()
+    : renderReview();
+  save();
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+document.getElementById("rail").addEventListener("click",e=>{
+  const b=e.target.closest("[data-t]"); if(!b) return;
+  S.topic=b.dataset.t; render(); window.scrollTo({top:0,behavior:"smooth"});
+});
+document.getElementById("tabs").addEventListener("click",e=>{
+  const b=e.target.closest("[data-m]"); if(!b) return;
+  S.mode=b.dataset.m; render();
+});
+document.getElementById("panel").addEventListener("click",e=>{
+  const t=topic();
+
+  const o=e.target.closest("[data-o]");
+  if(o && !o.disabled){
+    const i=Math.min(S.idx[t.id]||0,t.mcq.length-1), j=+o.dataset.o;
+    S.ans[t.id]=S.ans[t.id]||{};
+    S.ans[t.id][i]={pick:j, ok:!!t.mcq[i].o[j].ok};
+    render(); return;
+  }
+  if(e.target.id==="next"){
+    const i=Math.min(S.idx[t.id]||0,t.mcq.length-1);
+    S.idx[t.id]=Math.min(i+1,t.mcq.length-1); render();
+    document.querySelector(".qcard").scrollIntoView({block:"nearest",behavior:"smooth"}); return;
+  }
+  if(e.target.id==="prev"){
+    const i=Math.min(S.idx[t.id]||0,t.mcq.length-1);
+    S.idx[t.id]=Math.max(i-1,0); render(); return;
+  }
+  if(e.target.id==="clear"){
+    delete S.ans[t.id]; S.idx[t.id]=0; render(); return;
+  }
+  const rv=e.target.closest("[data-reveal]");
+  if(rv){
+    const sk=rv.dataset.reveal;
+    const ta=document.getElementById("ta-"+sk);
+    S.self[sk]=Object.assign({ticks:[]},S.self[sk],{open:true,text:ta?ta.value:""});
+    render(); return;
+  }
+});
+document.getElementById("panel").addEventListener("change",e=>{
+  const c=e.target.closest("input[type=checkbox][data-sk]"); if(!c) return;
+  const sk=c.dataset.sk, j=+c.dataset.j;
+  const st=S.self[sk]||{ticks:[]}; st.ticks=st.ticks||[]; st.ticks[j]=c.checked;
+  S.self[sk]=st; render();
+});
+document.getElementById("panel").addEventListener("input",e=>{
+  if(e.target.tagName!=="TEXTAREA") return;
+  const sk=e.target.id.replace(/^ta-/,"");
+  S.self[sk]=Object.assign({ticks:[]},S.self[sk],{text:e.target.value});
+  save();
+});
+
+render();
+</script>
+</body>
+</html>
