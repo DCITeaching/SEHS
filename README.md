@@ -7,9 +7,9 @@ Ten units, released one at a time as each is taught.
 
 ```
 .
-├── index.html          hub — lists all ten units, edit the UNITS block to open one
+├── index.html          hub — lists all ten units, edit the cards to open one
 ├── .nojekyll           stops GitHub's Jekyll build touching the files
-├── CNAME               custom domain (one line, no https://)
+├── CNAME               custom domain (one line, no https://) — add when you set DNS
 ├── assets/
 │   ├── sehs.css        all styling, hub and units. Restyle here once.
 │   └── review.js       the quiz engine. Shared. Do not edit per unit.
@@ -36,8 +36,8 @@ so a repeated id makes two units overwrite each other's answers.
 
 ```js
 {s:"The question stem?",
- o:[{t:"The correct option", ok:1},
-    {t:"A wrong option", f:"Why this one is tempting, and what is actually true."},
+ o:[{t:"A wrong option", f:"Why this one is tempting, and what is actually true."},
+    {t:"The correct option", ok:1},
     …],
  truth:"Shown after any answer.",
  pg:"p. 259"}
@@ -45,6 +45,10 @@ so a repeated id makes two units overwrite each other's answers.
 
 Exactly one option carries `ok:1`. Every other option needs an `f` — that feedback is the
 whole point of the tool. A written item's `ms` array must hold one entry per mark.
+
+**Vary which position holds `ok:1`.** The page labels options A–D in array order, so if every
+item is keyed first, every answer is A. Unit 1 runs roughly even across the four positions.
+Keep a superset option ("All of these…") in last position wherever one appears.
 
 ## Privacy
 

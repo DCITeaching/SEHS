@@ -15,8 +15,8 @@ DNS → Manage Zones → your domain → Add New Record:
 | Value | `<your-github-username>.github.io` |
 | TTL | 1 hour |
 
-Trailing dot optional; GoDaddy adds it. Do not put `https://` in the value, and do not
-point it at the repository — it is the username, not `username.github.io/SEHS`.
+Do not put `https://` in the value, and do not point it at the repository — it is the
+username, not `username.github.io/SEHS`.
 
 ## 2. GitHub — claim the domain
 
@@ -33,22 +33,10 @@ renews itself.
 ## If you would rather use the apex (`yourdomain.org` with no subdomain)
 
 Four A records and two AAAA records, replacing any existing A record for the root — which
-will take down whatever currently answers there. Only do this if nothing else is on the
-apex.
+will take down whatever currently answers there. Only do this if nothing else is on the apex.
 
-```
-A     185.199.108.153
-A     185.199.109.153
-A     185.199.110.153
-A     185.199.111.153
-AAAA  2606:50c0:8000::153
-AAAA  2606:50c0:8001::153
-AAAA  2606:50c0:8002::153
-AAAA  2606:50c0:8003::153
-```
-
-**Verify these against GitHub's own documentation before entering them** — GitHub has
-changed its Pages IP addresses before, and a stale address fails silently.
+**Verify the current addresses against GitHub's own documentation before entering them.**
+GitHub has changed its Pages IP addresses before, and a stale address fails silently:
 <https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site>
 
 ## One caution about which domain you use
