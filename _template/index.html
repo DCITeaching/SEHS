@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Self-paced review for IB SEHS SL Unit N.">
+<title>Unit N Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+</style>
+<link rel="stylesheet" href="../assets/sehs.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="mast">
+    <a class="backlink" href="../">&larr; All units</a>
+    <div class="masthead-row">
+      <button class="themebtn" id="themebtn" type="button">Theme</button>
+      <p class="eyebrow" id="m-eyebrow"></p>
+      <h1 id="m-title"></h1>
+      <p class="sub" id="m-sub"></p>
+    </div>
+    <div class="overall">
+      <span class="meter-label" id="ovlabel">0 of 0 answered</span>
+      <span class="meter"><i id="ovbar" style="width:0%"></i></span>
+    </div>
+  </div>
+
+  <nav class="rail" id="rail"></nav>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="panel"></div>
+
+  <footer id="m-sources"></footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT DATA — the only part that changes from unit to unit.
+   ============================================================ */
+const UNIT = {
+id: "uN",
+eyebrow: "IB SEHS SL · Unit N",
+title: "Unit title",
+sub: "Study the section, then answer. Every wrong option tells you why it was tempting and sends you back to the page in the book that settles it. Nothing here is recorded or graded.",
+sources: `Content and page references are from the course textbook, chapters [TBD].`,
+
+topics: [
+{
+id:"t1", code:"B.x.x", name:"First topic", pages:"000–000",
+study:[
+ {h:"A section heading", pg:"p. 000", html:`
+  <p>Plain explanation. Use <b>bold</b> for the thing that matters.</p>`,
+  table:[["Term","Definition"],["Another term","Its definition"]],
+  flag:`<b>The trap.</b> Name why students get this wrong.`}
+],
+mcq:[
+ {s:"The question stem?",
+  o:[{t:"The correct option",ok:1},
+     {t:"A wrong option",f:"Why this one is tempting, and what is actually true."},
+     {t:"Another wrong option",f:"Why this one is tempting."},
+     {t:"A third wrong option",f:"Why this one is tempting."}],
+  truth:"The explanation shown after any answer.", pg:"p. 000"}
+],
+written:[
+ {q:"A question worth three marks.", m:3,
+  ms:["First creditable point.","Second creditable point.","Third creditable point."],
+  note:"What students typically leave on the table."}
+]}
+]
+};
+</script>
+<script src="../assets/review.js"></script>
+<script>
+  document.getElementById("m-eyebrow").textContent = UNIT.eyebrow;
+  document.getElementById("m-title").textContent   = UNIT.title;
+  document.getElementById("m-sub").textContent     = UNIT.sub;
+  document.getElementById("m-sources").innerHTML   = UNIT.sources;
+</script>
+</body>
+</html>

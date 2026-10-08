@@ -1,52 +1,57 @@
-# SEHS — Unit 1 review
+# SEHS — DC International School
 
-Self-paced revision for **IB Sports, Exercise and Health Science SL, Unit 1: The Movement Analysts**
-(DC International School, 2026–27 cohort).
+Revision site for **IB Sports, Exercise and Health Science SL**, 2026–27 cohort.
+Ten units, released one at a time as each is taught.
 
-**Live site:** https://<your-username>.github.io/SEHS/
+## Structure
 
-## What it is
+```
+.
+├── index.html          hub — lists all ten units, edit the UNITS block to open one
+├── .nojekyll           stops GitHub's Jekyll build touching the files
+├── CNAME               custom domain (one line, no https://)
+├── assets/
+│   ├── sehs.css        all styling, hub and units. Restyle here once.
+│   └── review.js       the quiz engine. Shared. Do not edit per unit.
+├── unit-01/index.html  Unit 1 — The Movement Analysts
+└── _template/          starter for a new unit. Copy, rename, fill in.
+```
 
-A single-page study tool covering syllabus statements B.1.1 to B.1.4, plus a Paper 1B
-data-skills module. Five topics, 57 multiple-choice questions and 11 written items.
+Every unit page is the same three things: a `<head>`, a `UNIT = {...}` object holding
+all the content, and a `<script src="../assets/review.js">`. The engine never changes.
 
-Every wrong answer returns three things: why that option was tempting, what is actually
-correct, and the page in the course textbook that settles it. Written items reveal a
-markscheme the student ticks themselves, point by point.
+## Adding a unit
 
-Nothing is recorded or transmitted. Progress is kept in the browser's own storage on the
-student's device and never leaves it.
+1. `cp -r _template unit-02`
+2. Open `unit-02/index.html` and edit the `UNIT` object: `id`, `eyebrow`, `title`,
+   `sub`, `sources`, and the `topics` array.
+3. In the root `index.html`, find the Unit 02 card and swap it from the "soon" shape to
+   the linked shape — copy Unit 01's card and change the number, name and `href`.
+4. Commit. It is live in about a minute.
 
-## Deploying
+Give every unit a distinct `id` (`u1`, `u2`, …). It keys the student's saved progress,
+so a repeated id makes two units overwrite each other's answers.
 
-This is one self-contained file with no build step and no dependencies to install.
-
-1. Put `index.html` in the repository root.
-2. Settings → Pages → Source: **Deploy from a branch** → `main` / `(root)`.
-3. The site appears at `https://<your-username>.github.io/SEHS/` within a minute or two.
-
-Fonts load from Google Fonts; everything else is inline. The page works offline once cached,
-falling back to system fonts.
-
-## Editing the questions
-
-All content lives in the `T` array near the top of the `<script>` block at the end of the file.
-Each topic has `study`, `mcq` and `written`. One MCQ looks like this:
+## Content shape
 
 ```js
-{s:"The question stem",
+{s:"The question stem?",
  o:[{t:"The correct option", ok:1},
     {t:"A wrong option", f:"Why this one is tempting, and what is actually true."},
     …],
- truth:"The explanation shown after any answer.",
+ truth:"Shown after any answer.",
  pg:"p. 259"}
 ```
 
-Exactly one option carries `ok:1`. Every other option needs an `f`. A written item's
-`ms` array must have one entry per mark.
+Exactly one option carries `ok:1`. Every other option needs an `f` — that feedback is the
+whole point of the tool. A written item's `ms` array must hold one entry per mark.
 
-## Sources
+## Privacy
 
-Content and page references come from the course textbook, chapters B.1.1 (pp. 252–268),
-B.1.2 (269–280), B.1.3 (281–299) and B.1.4 (300–307). Sections marked **AHL** are
-Additional Higher Level and are not assessed at SL.
+No analytics, no accounts, no network calls except Google Fonts. Student progress lives in
+`localStorage` on their own device, is keyed per unit, and never leaves the browser.
+
+## Deploying
+
+Settings → Pages → Deploy from a branch → `main` / `(root)`.
+For the custom domain, see `DNS.md`.
