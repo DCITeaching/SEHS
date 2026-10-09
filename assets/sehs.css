@@ -282,3 +282,40 @@ footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);color:v
 .companion{margin:14px 0 0;font-size:14px}
 .companion a{font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
 .companion span{display:block;color:var(--fg-3);font-size:13.5px;margin-top:3px}
+
+/* ===================== reference page ===================== */
+.tool{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);
+  padding:10px 0 12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:16px}
+#filter{flex:1;min-width:200px;background:var(--surface);color:var(--fg);border:1px solid var(--line);
+  border-radius:8px;padding:10px 13px;font-family:var(--sans);font-size:15px}
+#filter:focus{border-color:var(--accent);outline:none}
+.hits{font-family:var(--mono);font-size:11.5px;color:var(--fg-3);white-space:nowrap}
+.jump{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.jump a{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--fg-2);text-decoration:none;
+  border:1px solid var(--line);border-radius:99px;padding:4px 10px;background:var(--surface)}
+.jump a:hover{border-color:var(--accent);color:var(--accent)}
+
+.refsec{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow);scroll-margin-top:80px}
+.rhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.rhead h2{font-size:20px;margin:0}
+.rlay{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--accent);
+  border:1px solid var(--accent);border-radius:99px;padding:2px 8px}
+.rpg{font-family:var(--mono);font-size:11px;color:var(--fg-3);margin-left:auto}
+.refsec p{font-size:14.5px;color:var(--fg-2);max-width:66ch}
+.rscroll{overflow-x:auto}
+.rtab{width:100%;border-collapse:collapse;font-size:14.5px}
+.rtab th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--fg-3);border-bottom:1px solid var(--line);padding:6px 14px 6px 0;font-weight:500;white-space:nowrap}
+.rtab td{padding:7px 14px 7px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--fg-2)}
+.rtab td.k{color:var(--fg);font-weight:600;white-space:nowrap}
+.rtab tr:last-child td{border-bottom:0}
+.rnote{margin-top:13px;background:var(--surface-2);border-radius:7px;padding:10px 13px;font-size:14px}
+@media print{
+  .tool,.jump,.themebtn,.backlink{display:none}
+  .refsec{break-inside:avoid;box-shadow:none;border-color:#ccc}
+}
+.xref{margin:0 0 20px;font-size:14px;padding:13px 15px;background:var(--surface);
+  border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 9px 9px 0;box-shadow:var(--shadow)}
+.xref a{font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.xref span{display:block;color:var(--fg-3);font-size:13.5px;margin-top:4px}

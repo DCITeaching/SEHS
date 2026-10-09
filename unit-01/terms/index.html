@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="The vocabulary the eight dossier layers expect, with a page reference on every row.">
+<title>Words for the Dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+</style>
+<link rel="stylesheet" href="../../assets/sehs.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="dmast">
+    <a class="backlink" href="../">&larr; Unit 1 review</a>
+    <button class="themebtn" id="themebtn" type="button">Theme</button>
+    <p class="eyebrow">IB SEHS SL &middot; Unit 1 &middot; Reference</p>
+    <h1>Words for the Dossier</h1>
+    <p class="sub">The vocabulary the eight layers expect. Look things up here while you write &mdash;
+    the names are not the task, choosing the right ones is.</p>
+  </div>
+
+  <div class="tool">
+    <input type="search" id="filter" placeholder="Filter &mdash; try &ldquo;pronation&rdquo;, &ldquo;hinge&rdquo;, &ldquo;eccentric&rdquo;" autocomplete="off">
+    <span class="hits" id="hits"></span>
+  </div>
+
+  <nav class="jump" id="jump"></nav>
+  <div id="body"></div>
+
+  <footer>
+    Everything here is from your chapters: B.1.1 (pp.&nbsp;252&ndash;268), B.1.2 (269&ndash;280), B.1.3 (281&ndash;299),
+    B.1.4 (300&ndash;307). Page numbers are on every row so you can check it rather than trust it.
+  </footer>
+</div>
+
+<script>
+const SEC = [
+
+{id:"use", t:"How to use this", layer:"", rows:[], html:`
+<p>Your data booklet is open in every exam you sit. The IB's own note on Paper 1A says that because of it
+there is <b>less reliance on recall of the terminology for anatomy</b> &mdash; the questions test whether you can
+<i>use</i> the words, not whether you memorised them. This page works the same way.</p>
+<p><b>What it will not do.</b> It will not tell you which joints are in your movement, which muscle is the agonist
+in your return phase, or what your lever class is. Those change with the movement you claimed, and choosing them
+<i>is</i> the dossier. A list of words is not an analysis &mdash; Dossier Q used real anatomical terms and still scored badly.</p>`},
+
+{id:"direction", t:"Where things are", layer:"Layer 1", pg:"p. 254", rows:[
+["Superior","Above, or nearer to the head"],
+["Inferior","Below, or further away from the head"],
+["Anterior","In front of, or nearer to the front"],
+["Posterior","Behind, or nearer to the back"],
+["Medial","Closer to the midline of the body"],
+["Lateral","Further away from the midline"],
+["Proximal","Nearer to where a limb attaches to the body"],
+["Distal","Further away from where a limb attaches"],
+["Internal","Located inside, or further from the surface"],
+["External","Located on or near the surface"],
+["Intermediate","Between two structures, one medial and one lateral"]],
+note:`Proximal and distal run along the limb from where it joins the trunk. They are <b>not</b> up and down &mdash;
+superior and inferior are that pair. Your book uses internal and external, not deep and superficial.`},
+
+{id:"segments", t:"Naming body segments", layer:"Layer 1", pg:"p. 254, 257", rows:[
+["Arm","The upper arm only &mdash; shoulder to elbow. The bone is the humerus"],
+["Forearm","Elbow to wrist. The bones are the radius and ulna"],
+["Thigh","Hip to knee. The bone is the femur"],
+["Leg","The lower leg only &mdash; knee to ankle. The bones are the tibia and fibula"],
+["Trunk","Head, neck, trunk, hand and foot are the other segments Figure 2 labels"]],
+note:`&ldquo;The arm&rdquo; and &ldquo;the leg&rdquo; mean something narrower in anatomy than in conversation.
+Writing &ldquo;the arm moves&rdquo; when you mean the whole limb costs you on precision.`},
+
+{id:"planes", t:"Planes and axes", layer:"Layer 2", pg:"p. 258–259", head:["Plane","Axis you turn about","Movements"], rows:[
+["Sagittal (median) &mdash; cuts left from right","Frontal axis, left to right","Flexion, extension"],
+["Frontal &mdash; cuts front from back","Sagittal axis, front to back","Abduction, adduction"],
+["Transverse &mdash; cuts top from bottom","Longitudinal axis, top to bottom","Medial and lateral rotation"]],
+note:`The plane and its axis never share a name. The axis is perpendicular to the plane you move in.
+For the whole body the axes pass through the centre of gravity; at a joint they pass through the joint centre.`},
+
+{id:"terms", t:"The twenty movement terms", layer:"Layer 2", pg:"p. 259–260", rows:[
+["Flexion","Closing the joint angle"],
+["Extension","Opening the joint angle"],
+["Abduction","Opening the joint angle away from the midline"],
+["Adduction","Closing the joint angle towards the midline"],
+["Medial rotation","The front of the moving bone turns towards the inside of the body"],
+["Lateral rotation","The front of the moving bone turns towards the outside"],
+["Elevation","Lifting or moving upwards &mdash; shrugging the shoulders"],
+["Depression","Dropping or moving downwards"],
+["Protraction","Anterior movement in the transverse plane &mdash; shoulders rounded forward"],
+["Retraction","Returning a protracted part to the anatomical position"],
+["Horizontal flexion","Closing the angle around the transverse plane, <b>once already flexed to 90°</b>. Also horizontal adduction"],
+["Horizontal extension","Opening it from the same start. Also horizontal abduction"],
+["Dorsiflexion","<b>Flexion</b> of the ankle &mdash; toes pulled up towards the shin"],
+["Plantarflexion","<b>Extension</b> of the ankle &mdash; pointing the toes"],
+["Inversion","<b>Lateral</b> rotation of the ankle &mdash; the sole faces inwards"],
+["Eversion","<b>Medial</b> rotation of the ankle &mdash; the sole faces outwards"],
+["Pronation","Medial rotation of the radioulnar joint <b>(not the wrist)</b> &mdash; palm turns down"],
+["Supination","Lateral rotation of the radioulnar joint <b>(not the wrist)</b> &mdash; palm turns up"],
+["Opposition","The thumb crosses the palm to touch a fingertip"],
+["Reposition","The thumb returns beside the index finger"],
+["Circumduction","Circling a segment &mdash; a <i>combination</i> of hyperextension, abduction, extension and adduction. Needs at least a biaxial joint"],
+["Hyperextension","Beyond 180°, or back past the starting position"]],
+note:`Pronation and supination mean something different at the <b>foot</b>: pronation there is dorsiflexion +
+eversion + abduction, supination is plantarflexion + inversion + adduction (p.&nbsp;262).`},
+
+{id:"joints", t:"Naming the joints", layer:"Layer 4", pg:"p. 276–277", head:["Plain name","Formal name","Type"], rows:[
+["Shoulder","Glenohumeral","Synovial, ball and socket"],
+["Elbow","Humeroulnar","Synovial, hinge"],
+["Forearm rotation","Radioulnar","Synovial, pivot"],
+["Wrist","Radiocarpal","Synovial, condyloid"],
+["Thumb base","Carpometacarpal of the thumb","Synovial, saddle"],
+["Between carpals / between tarsals","&mdash;","Synovial, gliding"],
+["Hip","&mdash;","Synovial, ball and socket"],
+["Knee","&mdash;","Synovial, hinge"],
+["Between phalanges","&mdash;","Synovial, hinge"],
+["Between vertebrae","&mdash;","Cartilaginous &mdash; fibrocartilage disc"],
+["Ribs to sternum","&mdash;","Cartilaginous &mdash; hyaline"],
+["Skull sutures","&mdash;","Fibrous &mdash; no movement"]],
+note:`The formal names come from the worked example in <i>Three Dossiers That Are Not Yours</i>. Plain names are
+accepted; the formal one is more precise where you have it. <b>If your movement uses a joint not on this list, ask
+rather than guessing a formal name</b> &mdash; an invented one costs you on accuracy.`},
+
+{id:"classes", t:"Joint classes", layer:"Layer 4", pg:"p. 275–277", head:["Class","Cavity","Movement"], rows:[
+["Fibrous","No","<b>None</b>"],
+["Cartilaginous","No","Limited"],
+["Synovial","Yes","Free &mdash; the joints that matter for movement"],
+["&nbsp;&nbsp;&middot; Gliding","","Back and forth, side to side. Least of all synovial joints"],
+["&nbsp;&nbsp;&middot; Hinge","","One direction &mdash; flexion and extension"],
+["&nbsp;&nbsp;&middot; Pivot","","Rotation"],
+["&nbsp;&nbsp;&middot; Condyloid","","Two directions"],
+["&nbsp;&nbsp;&middot; Saddle","","Two directions"],
+["&nbsp;&nbsp;&middot; Ball and socket","","All directions. Greatest range"]],
+note:`Give both the class and the type &mdash; &ldquo;synovial, hinge&rdquo; is two pieces of information and the
+mark wants both. The more movement a joint has, the less stability, and the greater the injury risk.`},
+
+{id:"tissue", t:"Connective tissues", layer:"Layer 3", pg:"p. 269–276", rows:[
+["Bone","The rigid levers and the attachment sites. Collagen plus mineral salts"],
+["Ligament","<b>Bone to bone.</b> Stability; restrains movement at its normal limit. Strong and flexible but <b>not elastic</b>"],
+["Tendon","<b>Muscle to bone.</b> Transmits the force of contraction. A flat sheet one is an aponeurosis"],
+["Cartilage","Reduces friction, absorbs shock. <b>No blood vessels, no nerves</b> &mdash; so it repairs slowly"],
+["&nbsp;&nbsp;&middot; Hyaline","The most abundant. On the articulating surfaces"],
+["&nbsp;&nbsp;&middot; Fibrocartilage","Menisci and intervertebral discs"],
+["Fascia","Surrounds and separates. Epimysium (whole muscle), perimysium (bundles), endomysium (single fibres)"],
+["Synovial fluid","Lubricates the cavity, feeds the cartilage. Like uncooked egg white"],
+["Menisci","Semilunar fibrocartilage discs improving the fit between poorly matched bones"],
+["Bursae","Fluid-filled sacs where structures rub. Lined by synovial membrane"]],
+note:`Say what the tissue does <i>in your movement</i>, naming the actual muscle and bone. A definition earns
+much less than an application.`},
+
+{id:"contraction", t:"Contraction types", layer:"Layer 5", pg:"p. 287", head:["Type","Muscle length","Force against resistance"], rows:[
+["Isometric","Unchanged &mdash; static","Nothing moves at the joint"],
+["Isotonic concentric","<b>Shortens</b>","Muscle force <b>greater</b> than the resistance"],
+["Isotonic eccentric","<b>Lengthens</b>","Muscle force <b>less</b> than the resistance"],
+["Isokinetic","Varies","The <b>body segment</b> moves at constant speed"]],
+note:`Name them in full &mdash; <i>isotonic eccentric</i>, not <i>eccentric</i>. If the limb moves against the
+resistance, the agonist is concentric; if it moves with the resistance but under control, something is eccentric;
+if nothing moves but muscles are working, it is isometric (p.&nbsp;290).`},
+
+{id:"roles", t:"Roles and fibre types", layer:"Layers 6 and 7", pg:"p. 284–291", rows:[
+["Agonist","The muscle producing the movement. Contracts and shortens"],
+["Antagonist","Opposes it. <b>Relaxes and lengthens</b> to permit the movement"],
+["Synergist","Helps the agonist, usually isometrically, by preventing an unwanted action"],
+["Fixator","Steadies a segment at <b>another</b> joint so the agonist can work"],
+["Origin","The end attached to the <b>fixed</b> bone"],
+["Insertion","The end attached to the bone <b>being pulled</b>"],
+["Reciprocal inhibition","The reflex that relaxes the antagonist when the agonist fires"],
+["Type I","Slow, small force, fatigue resistant. About 50% on average"],
+["Type IIa","Fast, stronger, also fatigue resistant. About 25%"],
+["Type IIx","Fastest, largest force, fatigues quickly. About 25%"],
+["Motor unit","One motor neuron and every fibre it innervates"],
+["All-or-none","Every fibre in a motor unit contracts, or none does"],
+["Orderly recruitment","I &rarr; IIa &rarr; IIx as intensity rises. Smaller motor neurons first"]],
+note:`Roles belong to the movement, not permanently to a muscle &mdash; they reverse between your phases.
+The antagonist does <b>not</b> contract to oppose the agonist; the book calls that a common misconception (p.&nbsp;291).`},
+
+{id:"levers", t:"Levers", layer:"Layer 8", pg:"p. 300–303", head:["Class","Arrangement","MA","In the body"], rows:[
+["First","Fulcrum <b>between</b> effort and load","Above or below 1","Fairly rare. Neck muscles against the weight of the head"],
+["Second","Load <b>between</b> fulcrum and effort","Always above 1","Very rare. The calf standing on the toes is the only usual example"],
+["Third","Effort <b>between</b> fulcrum and load","Always below 1","Very common. Buys range and speed, not force"],
+["Fulcrum","The pivot. In the body, the joint","",""],
+["Effort","The force applied. In the body, the muscle","",""],
+["Load","The resistance being moved","",""],
+["Moment arm","The <b>perpendicular</b> distance from the axis to the line of action","",""],
+["Mechanical advantage","Effort moment arm &divide; load moment arm","",""]],
+note:`Decide the class from the arrangement in <i>your</i> movement, never from what is usually true. A mechanical
+advantage below 1 does not prove third class &mdash; most of the body's first-class systems are below 1 too.`},
+
+{id:"muscles1", t:"Muscles your chapters give an action for", layer:"Layer 7", pg:"p. 282–301",
+head:["Muscle","Where","What the book says it does"], rows:[
+["Biceps brachii","Anterior upper arm","Flexes the elbow; supinates the radioulnar joint"],
+["Triceps brachii","Posterior upper arm","Extends the elbow"],
+["Brachialis","Anterior, at the elbow","Assists elbow flexion"],
+["Brachioradialis","Anterior forearm, elbow to wrist","Assists elbow flexion"],
+["Deltoid","Over the shoulder","Abducts the shoulder"],
+["Latissimus dorsi","Back","Antagonist to shoulder abduction; extends the shoulder"],
+["Trapezius","Upper back and neck","Fixator &mdash; holds the scapula in place"],
+["Teres minor","Shoulder","Synergist &mdash; cancels unwanted shoulder action"],
+["Pectoralis major","Chest","Supplies the effort in a throw (B.1.4, p.&nbsp;303)"],
+["Hamstring group","Posterior thigh","Flexes the knee. Biceps femoris, semitendinosus, semimembranosus"],
+["Quadriceps femoris group","Anterior thigh","Extends the knee; works eccentrically running downhill"],
+["Gastrocnemius","Calf","Plantarflexes via the Achilles tendon onto the calcaneus"],
+["Pronator muscles","Forearm","Pronate the radioulnar joint"],
+["Posterior neck muscles","Back of the neck","Hold the head upright"],
+["Core / trunk muscles","Trunk","Hold the trunk steady while the limbs work &mdash; usually isometric"]]},
+
+{id:"muscles2", t:"Muscles named on the diagram, with no action given", layer:"Layer 7", pg:"p. 282, Figure 2",
+head:["Muscle","Where"], rows:[
+["Flexor carpi group","Anterior forearm"],
+["Extensor carpi group","Posterior forearm"],
+["Flexor digitorum","Forearm"],
+["Extensor digitorum","Posterior forearm"],
+["Extensor digitorum longus","Anterior lower leg"],
+["Rectus abdominis","Front of the trunk"],
+["External oblique","Side of the trunk"],
+["Iliopsoas","Deep at the hip"],
+["Gluteus maximus","Back of the hip"],
+["Gluteus medius","Side of the hip"],
+["Adductor longus","Inner thigh"],
+["Sartorius","Across the front of the thigh"],
+["Tibialis anterior","Front of the shin"],
+["Peroneus longus","Outer lower leg"]],
+note:`Figure 2 labels these but the chapter never states what they do. <b>Many muscle names tell you the action</b>
+&mdash; <i>flexor</i>, <i>extensor</i>, <i>adductor</i>, <i>pronator</i> &mdash; and B.1.1 (p.&nbsp;253) says the
+name often hints at location too. Use the name as a lead, then confirm before you commit it to the dossier.`},
+
+{id:"saythis", t:"Say this, not that", layer:"Criterion B", pg:"", head:["Instead of","Write"], rows:[
+["bends / straightens","flexes / extends"],
+["the arm went up","flexion at the shoulder, or abduction &mdash; say which"],
+["above / below","superior / inferior"],
+["near the body / far from it","proximal / distal"],
+["in front / behind","anterior / posterior"],
+["the arm","the humerus, or the upper arm &mdash; whichever you mean"],
+["the leg","the thigh, the lower leg, the femur, the tibia"],
+["the muscle tightens","the muscle contracts &mdash; and name the type"],
+["it goes back","the return phase, and what happens in it"],
+["the shoulder is very mobile","range is traded against stability at the shoulder, because&hellip;"],
+["slow twitch","type I"],
+["fast twitch","type IIa or type IIx &mdash; say which, and why"]],
+note:`Criterion B is precision, not formality. Search your own dossier for the words in the left column.`},
+
+{id:"shapes", t:"Shapes of a sentence that scores", layer:"All layers", pg:"",
+head:["Layer","The shape","The same shape, on a broom stroke"], rows:[
+["2","[Movement] at [joint], in the [plane] plane, about the [axis] axis","Flexion at the shoulder, in the sagittal plane, about the frontal axis"],
+["3","[Tissue] [does what] for [named structure] in this movement","Tendon transmits the force of the triceps brachii to the olecranon"],
+["4","[Joint] is [class], [type]. The trade is [given up] for [gained], because [structure]","Glenohumeral: synovial, ball and socket. Range is bought with stability, because a shallow socket gives little bony fit"],
+["5","[Muscle] contracts [type] to [movement] at [joint] during the [phase]","The triceps brachii contracts concentrically to extend the elbow on the push"],
+["6","Type [x] dominate, because the force is [level] and it lasts [duration]","Type I dominate: the force is a small fraction of maximum and it repeats for minutes"],
+["7","[Muscle] is the agonist; [muscle] is the antagonist, relaxing and lengthening to permit it","Triceps agonist; biceps antagonist, lengthening as it relaxes"],
+["8","[Class], because the [part] lies between the [part] and the [part]. The movement gains [what]","Third class, because the effort lies between the fulcrum and the load. The hand travels further and faster"]],
+note:`These are shapes, not answers &mdash; the examples use the broom from <i>Three Dossiers</i>, which nobody can
+claim. Notice every shape has <b>at least two clauses</b>. The commonest way to lose a mark in this course is to
+write the first clause and stop.`}
+];
+
+/* ---------- render ---------- */
+const bodyEl=document.getElementById("body"), jumpEl=document.getElementById("jump");
+document.getElementById("themebtn").addEventListener("click",()=>{
+  const c=document.documentElement.getAttribute("data-theme");
+  const d=c? c==="dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme", d?"light":"dark");
+});
+
+jumpEl.innerHTML = SEC.filter(s=>s.rows.length||s.html)
+  .map(s=>`<a href="#${s.id}">${s.t}</a>`).join("");
+
+bodyEl.innerHTML = SEC.map(s=>{
+  let h=`<section class="refsec" id="${s.id}" data-s="${s.id}">
+    <div class="rhead"><h2>${s.t}</h2>
+      ${s.layer?`<span class="rlay">${s.layer}</span>`:``}
+      ${s.pg?`<span class="rpg">${s.pg}</span>`:``}</div>`;
+  if(s.html) h+=s.html;
+  if(s.rows && s.rows.length){
+    h+=`<div class="rscroll"><table class="rtab">`;
+    if(s.head) h+=`<thead><tr>${s.head.map(x=>`<th>${x}</th>`).join("")}</tr></thead>`;
+    h+=`<tbody>${s.rows.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' class="k"':''}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  }
+  if(s.note) h+=`<p class="rnote">${s.note}</p>`;
+  return h+`</section>`;
+}).join("");
+
+const filt=document.getElementById("filter"), hits=document.getElementById("hits");
+filt.addEventListener("input",()=>{
+  const q=filt.value.trim().toLowerCase();
+  let shown=0;
+  document.querySelectorAll(".refsec").forEach(sec=>{
+    if(!q){ sec.hidden=false; sec.querySelectorAll("tbody tr").forEach(r=>r.hidden=false); return; }
+    let any=false;
+    sec.querySelectorAll("tbody tr").forEach(r=>{
+      const m=r.textContent.toLowerCase().includes(q);
+      r.hidden=!m; if(m){any=true; shown++;}
+    });
+    const inTitle=sec.querySelector("h2").textContent.toLowerCase().includes(q);
+    if(inTitle){ sec.querySelectorAll("tbody tr").forEach(r=>r.hidden=false); any=true; }
+    sec.hidden=!any;
+  });
+  hits.textContent = q? (shown? shown+" row"+(shown===1?"":"s") : "nothing matches") : "";
+  jumpEl.hidden = !!q;
+});
+</script>
+
+</body>
+</html>
