@@ -177,14 +177,16 @@ footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);color:v
 .unit .num{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--accent)}
 .unit.soon .num{color:var(--fg-3)}
 .unit h3{font-size:18px;line-height:1.25;margin:0}
-.unit a{color:inherit;text-decoration:none}
-.unit a:hover h3{text-decoration:underline;text-underline-offset:3px}
+.unit h3 a{color:inherit;text-decoration:none}
+.unit h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.unit .golinks{display:grid;gap:7px;margin-top:auto;padding-top:9px;border-top:1px solid var(--line)}
+.unit .golinks a{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--accent);text-decoration:none}
+.unit .golinks a:hover{text-decoration:underline;text-underline-offset:3px}
 .unit .stmts{font-family:var(--mono);font-size:11px;color:var(--fg-3);line-height:1.6;word-break:break-word}
 .pill{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
   border-radius:99px;padding:3px 8px;white-space:nowrap;border:1px solid}
 .pill.live{color:var(--ok);border-color:var(--ok);background:var(--ok-soft)}
 .pill.soon{color:var(--fg-3);border-color:var(--line)}
-.unit .go{font-family:var(--mono);font-size:11.5px;color:var(--accent);letter-spacing:.04em;margin-top:auto;padding-top:4px}
 .backlink{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
   color:var(--fg-3);text-decoration:none;margin-bottom:14px}
 .backlink:hover{color:var(--accent)}
@@ -280,6 +282,3 @@ footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);color:v
 .companion{margin:14px 0 0;font-size:14px}
 .companion a{font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
 .companion span{display:block;color:var(--fg-3);font-size:13.5px;margin-top:3px}
-.unit .sublink{font-family:var(--mono);font-size:11.5px;color:var(--accent);text-decoration:none;
-  letter-spacing:.04em;border-top:1px solid var(--line);padding-top:9px;margin-top:2px}
-.unit .sublink:hover{text-decoration:underline;text-underline-offset:3px}
