@@ -50,6 +50,17 @@ whole point of the tool. A written item's `ms` array must hold one entry per mar
 item is keyed first, every answer is A. Unit 1 runs roughly even across the four positions.
 Keep a superset option ("All of these…") in last position wherever one appears.
 
+## The dossier coach
+
+`unit-01/dossier/` is a different kind of page and deliberately contains no subject content.
+Every student's dossier analyses a different movement, so nothing generic could supply an
+answer. It asks interrogating questions, carries the four criteria from the brief verbatim,
+takes the student's own best-fit self-mark, and turns the result into a prioritised list of
+what to fix. Content questions are routed back to the unit review and the book.
+
+If you build one for a later unit's anchor task, keep that rule: questions about *their*
+work, never statements about the subject.
+
 ## Privacy
 
 No analytics, no accounts, no network calls except Google Fonts. Student progress lives in

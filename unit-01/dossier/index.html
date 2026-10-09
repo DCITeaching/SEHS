@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="A final self-check for the Unit 1 Movement Dossier. Questions, not answers.">
+<title>Finish the Dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+</style>
+<link rel="stylesheet" href="../../assets/sehs.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="mast">
+    <a class="backlink" href="../">&larr; Unit 1 review</a>
+    <div class="masthead-row">
+      <button class="themebtn" id="themebtn" type="button">Theme</button>
+      <p class="eyebrow">IB SEHS SL &middot; Unit 1 &middot; Anchor task</p>
+      <h1>Finish the Dossier</h1>
+      <p class="sub">A last pass over your own analysis before you hand it in. It asks the questions; the answers are in your movement, your composition book and your readings.</p>
+    </div>
+  </div>
+
+  <div class="noans">
+    <p class="noans-h">There are no answers on this page, and that is not me being difficult.</p>
+    <p>Every dossier in the class analyses a different movement. Nobody else claimed yours, so no page could tell you which joints are in it, which muscles do the work, or what the lever class is &mdash; those depend entirely on the movement you picked. What this page can do is ask you the things a reader will ask, in the order they will ask them, so you find the gaps before someone else does.</p>
+    <p>If you need the <b>content</b> &mdash; what a condyloid joint is, which contraction is which &mdash; that is the <a href="../">Unit 1 review</a>, your readings and the book. This page is only about whether your analysis of <i>your</i> movement is finished.</p>
+  </div>
+
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="panel"></div>
+
+  <footer>
+    This page supports <i>The Movement Dossier</i> brief and response template. It does not replace either, and it is
+    not the place the dossier is written. The criteria below are the four from your brief, unchanged.
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   LAYER INTERROGATION
+   Questions only. Nothing here supplies an analysis.
+   ============================================================ */
+const LAYERS = [
+{n:1, t:"Position", block:"1.2",
+ ask:"Name the movement. Identify which regions involved are axial and which appendicular. Write three positional statements locating the parts relative to each other.",
+ q:["If your movement uses two arms, two legs, or two hands &mdash; have you said <b>which one you are analysing</b>, and why that one?",
+    "Are your three positional statements about <i>this movement</i>, or three facts that would be true of anybody standing still?",
+    "Does each statement use a precise pair &mdash; superior/inferior, anterior/posterior, medial/lateral, proximal/distal &mdash; rather than above, in front, or near?",
+    "Have you included axial regions that are <i>working</i>, not only the ones that exist? A trunk held steady is doing something."],
+ thin:"Three true statements with your movement nowhere in them. &ldquo;The elbow is distal to the shoulder&rdquo; is true of every human alive; it tells a reader nothing about your stroke."},
+
+{n:2, t:"Planes and terms", block:"1.3",
+ ask:"The plane or planes the movement occurs in, and the correct movement term at every joint. Where a movement does not fit a plane cleanly, say so and say why.",
+ q:["Have you named the <b>axis</b> for each plane, not only the plane? They are two pieces of information and the pairing is deliberately counterintuitive.",
+    "Is there a movement term for <b>every</b> joint you listed in Layer 1, or only for the obvious one?",
+    "Does each joint have a term for <b>both phases</b>, or only the outward one?",
+    "If your movement arcs, twists or travels on a diagonal, have you said it does not sit in one plane &mdash; and why? Naming one plane for a two-plane movement is an accuracy error, not a simplification."],
+ thin:"One plane named for the whole movement. Almost no real movement happens in exactly one plane, and saying so is the sentence that earns the mark."},
+
+{n:3, t:"Connective tissue", block:"1.4",
+ ask:"Which connective tissues are doing work, and what each one contributes. If your movement involves impact or landing, say what absorbs it.",
+ q:["For each tissue, have you said what it contributes <b>to this movement</b> &mdash; or written its general definition?",
+    "Have you named the specific muscle and the specific bone, or left it at &ldquo;the arm&rdquo;?",
+    "If there is no impact in your movement, have you said so <b>explicitly</b>? Stating that nothing absorbs shock because there is no impact phase earns more than leaving the box empty.",
+    "Is every tissue you listed actually doing work here, or did you list all five because there are five?"],
+ thin:"Four textbook definitions in a row. &ldquo;Tendons connect muscle to bone&rdquo; is a definition; &ldquo;tendon transmits the force of the triceps to the olecranon&rdquo; is an analysis."},
+
+{n:4, t:"Joints", block:"1.5",
+ ask:"The classification of every joint involved. At the primary joint, name the trade between stability and range of movement.",
+ q:["Have you given <b>both</b> the structural class (fibrous, cartilaginous, synovial) and the type (hinge, ball and socket, pivot&hellip;)? Two pieces of information, not one.",
+    "Have you classified every joint from Layer 1, including the ones that barely move in your movement?",
+    "Have you named which joint is <b>primary</b>, and said <i>why</i> it is primary rather than just asserting it?",
+    "Is the trade written as a trade &mdash; what is given up and what is bought with it &mdash; or only as &ldquo;it has a big range&rdquo;?"],
+ thin:"The trade stated as a fact about the joint rather than as a trade. &ldquo;The shoulder is very mobile&rdquo; is half of it. The price is the other half, and the price is the mark."},
+
+{n:5, t:"Contraction", block:"1.6",
+ ask:"The type of contraction at each phase — including the return phase. A movement that only goes one way is only half analysed.",
+ q:["Does your <b>return phase</b> table have rows filled in, not just a heading?",
+    "Does the word <b>eccentric</b> appear anywhere? If not: is that because nothing in your movement is lowered or braked under control, or because you have not looked? Both answers can be correct &mdash; but only one is correct for your movement, and you should know which.",
+    "Is anything <b>held</b> rather than moved? Holding is isometric, and isometric is a contraction type.",
+    "Have you named each contraction in full &mdash; isotonic eccentric, isotonic concentric &mdash; rather than eccentric or concentric alone?"],
+ thin:"The return phase named and left empty. This is the single most common reason a dossier lands on 4 instead of 6 for Completeness."},
+
+{n:6, t:"Fibre type", block:"1.7",
+ ask:"Which fibre types dominate, and your reasoning. Reason from the intensity and duration, not from the name of the activity.",
+ q:["Does your reasoning say how much force is required, and how long the movement lasts?",
+    "Does the <b>name</b> of the activity appear anywhere in your reasoning? If it does, that sentence is not reasoning &mdash; the brief rules it out by name.",
+    "Could somebody who disagreed with you check your reasoning? Name what they would have to check.",
+    "Have you said what would change if the demand changed &mdash; heavier load, faster, longer?"],
+ thin:"The right fibre type with nothing behind it. The type on its own is worth very little; the justification is where the marks are."},
+
+{n:7, t:"Muscle pairs", block:"1.8",
+ ask:"The agonist and the antagonist at each joint, for both the outward and the return phase.",
+ q:["Are all four columns filled for every joint &mdash; outward agonist, outward antagonist, return agonist, return antagonist?",
+    "Have you said what the antagonist is <b>doing</b> &mdash; relaxing and lengthening to permit the movement &mdash; or only named it?",
+    "Does any sentence say the antagonist <i>contracts to oppose</i> the movement? That is the belief this unit was built to break. Find it and fix it.",
+    "Do the roles reverse between your phases? For most movements they should, and saying so out loud is worth a mark."],
+ thin:"A role named with no move attached. &ldquo;Biceps brachii is the antagonist&rdquo; is not the mark; the relaxing and lengthening is the mark."},
+
+{n:8, t:"Levers", block:"1.9",
+ ask:"The lever class at the primary joint, with mechanical advantage or disadvantage stated and justified from the arrangement.",
+ q:["Have you said where the effort, the fulcrum and the load actually are <b>in your movement</b> &mdash; named structures, not the generic diagram?",
+    "Did you decide the class from the <b>arrangement</b>, or from what is usually true? &ldquo;Most levers in the body are third class&rdquo; is not a justification.",
+    "Does the arrangement <b>change between your phases</b>? For many movements it does, and noticing it is one of the strongest things you can write.",
+    "Have you said what the movement <b>gains</b> from that advantage or disadvantage, not only that it has one?"],
+ thin:"The class asserted and the arrangement never described. Criterion D is reasoning, and a class with no arrangement behind it is an assertion."}
+];
+
+/* The four criteria, verbatim from the brief. */
+const CRIT = [
+{c:"A", name:"Anatomical accuracy",
+ b:["Several structures or movements are misidentified. The analysis would not survive being checked.",
+    "Mostly accurate. A small number of errors, none of them structural.",
+    "Accurate throughout. Every named structure is the right one and every movement term is the right term."],
+ how:"Pick the three structures you are least sure about and check each one against the book. Not the ones you are confident on &mdash; checking those feels productive and finds nothing."},
+{c:"B", name:"Precision of language",
+ b:["Terms are used approximately, or everyday words stand in for anatomical ones.",
+    "Terminology is mostly used correctly, with occasional imprecision.",
+    "Every term is used in its exact sense. Nothing is described loosely where a precise word exists."],
+ how:"Search your own text for: up, down, in front, behind, near, bends, straightens, the arm, the leg. Every one of those has a precise word waiting for it."},
+{c:"C", name:"Completeness",
+ b:["Only part of the movement is analysed — usually the outward phase only.",
+    "Most of the movement is covered. The return phase is present but thin.",
+    "The whole movement is accounted for, both phases, at every joint involved."],
+ how:"Count the joints in Layer 1. Now count how many appear in Layers 2, 5 and 7, in <i>both</i> phases. The difference between those two numbers is the gap. Your brief says this is the criterion that separates the class."},
+{c:"D", name:"Reasoning",
+ b:["Claims about muscle action, fibre type or lever class are asserted.",
+    "Most claims are justified. Some rest on the name of the activity rather than its demands.",
+    "Every claim is justified from the demands of the movement itself, and the reasoning could be checked by somebody who disagreed."],
+ how:"Find every sentence that states a conclusion &mdash; a fibre type, a lever class, a contraction. Ask of each: is the word <b>because</b> anywhere near it, and does what follows describe the movement rather than name it?"}
+];
+
+const FAST = [
+ "Does the return phase have content in it, at every joint, in Layers 5 and 7?",
+ "Does every joint you named in Layer 1 reappear in Layers 2, 4, 5 and 7?",
+ "Is there a <b>because</b> attached to your fibre type and to your lever class?",
+ "Have you used an everyday word anywhere a precise one exists?",
+ "Does any sentence say the antagonist contracts to oppose the movement?"
+];
+
+/* ============================================================ */
+const KEY="sehs-u1-dossier-v1";
+let S={tab:"layers", lay:{}, crit:{}, ev:{}};
+try{const r=localStorage.getItem(KEY); if(r) S=Object.assign(S,JSON.parse(r));}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+const STATES=[["none","Not started"],["thin","Written but thin"],["solid","Finished and checked"]];
+
+document.getElementById("themebtn").addEventListener("click",()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const dark=cur? cur==="dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme",dark?"light":"dark");
+});
+
+function renderTabs(){
+  const t=[["layers","The eight layers"],["crit","Mark your own"],["plan","What to fix first"],["fast","Ten-minute pass"]];
+  document.getElementById("tabs").innerHTML=t.map(([k,l])=>
+    `<button class="tab" role="tab" data-k="${k}" aria-selected="${S.tab===k}">${l}</button>`).join("");
+}
+
+function renderLayers(){
+  return `<p class="intro">Take one layer at a time with your response template open beside you. Tick a question only when you have
+   <i>looked</i> and it is true &mdash; ticking it because it sounds right is how a dossier arrives thin.</p>` +
+  LAYERS.map(L=>{
+    const st=S.lay[L.n]||"none";
+    const ticks=(S.lay["q"+L.n]||[]);
+    const done=ticks.filter(Boolean).length;
+    return `<section class="layer st-${st}">
+      <div class="lhead">
+        <span class="lnum">LAYER ${L.n}</span>
+        <h3>${L.t}</h3>
+        <span class="lblock">added in block ${L.block}</span>
+      </div>
+      <p class="lask">${L.ask}</p>
+      <ul class="checks">${L.q.map((q,i)=>`<li>
+        <input type="checkbox" id="c${L.n}-${i}" data-l="${L.n}" data-i="${i}" ${ticks[i]?"checked":""}>
+        <label for="c${L.n}-${i}">${q}</label></li>`).join("")}</ul>
+      <div class="thin"><b>How this layer usually goes thin.</b> ${L.thin}</div>
+      <div class="status">
+        <span class="slabel">${done} of ${L.q.length} checked &mdash; where is this layer?</span>
+        <span class="segs">${STATES.map(([v,l])=>
+          `<button class="seg${st===v?" on":""}" data-s="${v}" data-l="${L.n}">${l}</button>`).join("")}</span>
+      </div>
+    </section>`;
+  }).join("");
+}
+
+function renderCrit(){
+  const tot=CRIT.reduce((a,c)=>a+(+S.crit[c.c]||0),0);
+  const any=CRIT.some(c=>S.crit[c.c]);
+  return `<p class="intro">You marked three dossiers that were not yours before you wrote a word of this. Do the same thing to your own,
+   the same way: <b>best fit</b>, and every mark you award needs a sentence from your dossier that placed it there.
+   If you cannot find the sentence, that is the finding.</p>` +
+  CRIT.map(c=>{
+    const v=+S.crit[c.c]||0;
+    return `<section class="crit">
+      <div class="chead"><span class="ccode">${c.c}</span><h3>${c.name}</h3></div>
+      <div class="bands">${[[1,"1–2"],[3,"3–4"],[5,"5–6"]].map(([val,lab],i)=>
+        `<button class="band${v===val?" on":""}" data-c="${c.c}" data-v="${val}">
+          <span class="bnum">${lab}</span><span class="btxt">${c.b[i]}</span></button>`).join("")}</div>
+      <div class="how"><b>How to check it rather than guess it.</b> ${c.how}</div>
+      <label class="evl" for="ev-${c.c}">The sentence in <i>your</i> dossier that placed it there &mdash; or the one that should have been there and is not</label>
+      <textarea id="ev-${c.c}" data-c="${c.c}" placeholder="Quote it, or name what is missing…">${(S.ev[c.c]||"").replace(/</g,"&lt;")}</textarea>
+    </section>`;
+  }).join("") +
+  `<div class="total">
+     <span>Your own best-fit total</span>
+     <b>${any? tot+"–"+(tot+CRIT.filter(c=>S.crit[c.c]).length)+" / 24" : "— / 24"}</b>
+   </div>
+   <p class="note">A band is a range, so your total is a range too. Nobody marks themselves accurately the first time &mdash; the
+   point is not the number, it is that you had to find a sentence to defend it.</p>`;
+}
+
+function renderPlan(){
+  // Only layers the student has actually marked. Never tell them a layer is missing
+  // when all they have done is not clicked anything yet.
+  const marked=LAYERS.filter(L=>S.lay[L.n]);
+  const unfinished=marked.filter(L=>S.lay[L.n]!=="solid");
+  const unchecked=LAYERS.map(L=>({L,miss:L.q.filter((_,i)=>!((S.lay["q"+L.n]||[])[i])).length})).filter(x=>x.miss>0);
+  const weak=CRIT.filter(c=>S.crit[c.c] && +S.crit[c.c]<5).sort((a,b)=>(+S.crit[a.c])-(+S.crit[b.c]));
+  const nothing = !unfinished.length && !weak.length && marked.length===LAYERS.length;
+
+  if(!Object.keys(S.lay).length && !Object.keys(S.crit).length)
+    return `<div class="empty-card"><h3>Nothing to plan yet</h3>
+      <p>Work through <b>The eight layers</b> and <b>Mark your own</b>. Whatever you leave unticked or mark below a 5 collects here,
+      in the order worth fixing &mdash; so this page ends up telling you what to do tonight rather than everything you could possibly do.</p></div>`;
+
+  if(nothing) return `<div class="empty-card ok"><h3>Nothing outstanding</h3>
+    <p>Every layer is marked finished and every criterion is in the top band. Before you believe that: hand the dossier to somebody
+    who did not write it and ask them to find the return phase at every joint. If they can, you are done.</p></div>`;
+
+  let out = `<p class="intro">In order. Do the first one, not all of them.</p><ol class="plan">`;
+  weak.forEach(c=>{ out += `<li><span class="ptag crit">Criterion ${c.c}</span>
+    <b>${c.name}</b> &mdash; you put yourself in the ${+S.crit[c.c]<3?"1–2":"3–4"} band.
+    <div>${c.how}</div></li>`; });
+  unfinished.filter(L=>S.lay[L.n]==="none").forEach(L=>{
+    out += `<li><span class="ptag none">Missing</span> <b>Layer ${L.n} &middot; ${L.t}</b> is not started.
+    <div>${L.ask}</div></li>`; });
+  unfinished.filter(L=>S.lay[L.n]==="thin").forEach(L=>{
+    const miss=L.q.map((q,i)=>({q,i})).filter(x=>!((S.lay["q"+L.n]||[])[x.i]));
+    const show=miss.slice(0,2).map(x=>x.q).join("<br>");
+    out += `<li><span class="ptag thin">Thin</span> <b>Layer ${L.n} &middot; ${L.t}</b>
+      <div>${miss.length? "Still unanswered:<br>"+show+(miss.length>2? "<br><i>and "+(miss.length-2)+" more on the layers tab</i>":"") : L.thin}</div></li>`; });
+  out += `</ol>`;
+  const unmarked = LAYERS.length - marked.length;
+  if(unmarked) out += `<p class="note">${unmarked} layer${unmarked>1?"s are":" is"} not on this list because you have not marked ${unmarked>1?"them":"it"} yet \u2014 not because ${unmarked>1?"they are":"it is"} finished.</p>`;
+  out += `<p class="note">This list came from your own answers, not from anybody reading your dossier. It is as honest as you were.</p>`;
+  return out;
+}
+
+function renderFast(){
+  return `<div class="fast-card">
+    <h3>If you only have ten minutes</h3>
+    <p>Five questions that find most of the marks people lose. Read your own dossier against each one, in order.</p>
+    <ol class="fastlist">${FAST.map(q=>`<li>${q}</li>`).join("")}</ol>
+    <p class="note">Four of the five are about the return phase and about justification. That is not an accident &mdash; between them,
+    Completeness and Reasoning are half the available marks.</p>
+  </div>
+  <div class="fast-card">
+    <h3>Three things that are not worth doing tonight</h3>
+    <ul class="dont">
+      <li><b>Adding more joints.</b> A dossier is not scored on how many joints it names. Naming a joint you then fail to carry through Layers 2, 4, 5 and 7 costs you on Completeness.</li>
+      <li><b>Making the language fancier.</b> Criterion B is about precision, not formality. &ldquo;The sole faces inwards&rdquo; beats a long sentence that avoids saying which way the foot went.</li>
+      <li><b>Rewriting Layer 1.</b> It is one layer of eight and it is the one you have had longest. The marks are in 5, 7 and 8.</li>
+    </ul>
+  </div>`;
+}
+
+function render(){
+  renderTabs();
+  document.getElementById("panel").innerHTML =
+    S.tab==="layers"? renderLayers() : S.tab==="crit"? renderCrit() :
+    S.tab==="plan"? renderPlan() : renderFast();
+  save();
+}
+
+document.getElementById("tabs").addEventListener("click",e=>{
+  const b=e.target.closest("[data-k]"); if(!b) return;
+  S.tab=b.dataset.k; render(); window.scrollTo({top:0,behavior:"smooth"});
+});
+document.getElementById("panel").addEventListener("click",e=>{
+  const seg=e.target.closest(".seg");
+  if(seg){ S.lay[seg.dataset.l]=seg.dataset.s; render(); return; }
+  const band=e.target.closest(".band");
+  if(band){ S.crit[band.dataset.c]=+band.dataset.v; render(); return; }
+});
+document.getElementById("panel").addEventListener("change",e=>{
+  const c=e.target.closest("input[type=checkbox][data-l]"); if(!c) return;
+  const k="q"+c.dataset.l; S.lay[k]=S.lay[k]||[]; S.lay[k][+c.dataset.i]=c.checked;
+  render();
+});
+document.getElementById("panel").addEventListener("input",e=>{
+  if(e.target.tagName!=="TEXTAREA") return;
+  S.ev[e.target.dataset.c]=e.target.value; save();
+});
+
+render();
+</script>
+
+</body>
+</html>
